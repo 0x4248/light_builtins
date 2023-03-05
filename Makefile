@@ -36,7 +36,7 @@ init:
 	mkdir -p $(C_OUTPUT)
 	mkdir -p $(CPP_OUTPUT)
 
-configure_cpp_test:
+configure_test:
 	mkdir test
 	echo "This is a test file" > test/test.txt
 	echo "This is a test file" > test/test2.txt
