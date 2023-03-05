@@ -52,13 +52,9 @@ test_cpp:
 	$(CPP_OUTPUT)/cat test/test.txt
 	$(CPP_OUTPUT)/echo "This is a test"
 	$(CPP_OUTPUT)/mkdir test/test_dir3
-	read
 	$(CPP_OUTPUT)/rmdir test/test_dir3
-	read
 	$(CPP_OUTPUT)/rm test/test.txt
-	read
 	$(CPP_OUTPUT)/cp test/test2.txt test/test_copy.txt
-	read
 	$(CPP_OUTPUT)/mv test/test3.txt test/test_mv.txt
 
 test_c:
