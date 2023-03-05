@@ -1,0 +1,49 @@
+name: Releases CI
+on:
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: 'Create a prerelease'
+        required: true
+        default: 'true'
+      description:
+        description: 'Release description'
+        required: true
+        default: 'This is an automated release.'
+      title:
+        description: 'Release title'
+        required: true
+        default: 'Automated release'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: make
+        run: make
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.event.inputs.title }} ${{ github.ref }}
+          body: ${{ github.event.inputs.description }}
+          draft: false
+          prerelease: ${{ github.event.inputs.prerelease }}
+          files: |
+            bin/ls
+            bin/pwd
+            bin/cat
+            bin/echo
+            bin/mkdir
+            bin/rmdir
+            bin/rm
+            bin/cp
+            bin/mv
