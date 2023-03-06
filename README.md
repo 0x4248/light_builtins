@@ -4,9 +4,9 @@ This is a repository of the linux builtin commands that is lightweight and fast.
 You can use these command in your shell or in your program. There are also C versions of the commands.
 
 ## Commands List
-- `ls` - List directory contents ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
+- `ls` - List directory contents ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray
 - `pwd` - Print name of current/working directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `cat` - Concatenate files and print on the standard output ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
+- `cat` - Concatenate files and print on the standard output ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray
 - `echo` - Display a line of text ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `mkdir` - Create a directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `rmdir` - Remove a directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)

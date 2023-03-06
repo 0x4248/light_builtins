@@ -23,7 +23,9 @@ compile_cpp:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/mv.cpp -o $(CPP_OUTPUT)/mv
 
 compile_c:
+	$(C_CC) $(C_FLAGS) $(C_SRC)/ls.c -o $(C_OUTPUT)/ls
 	$(C_CC) $(C_FLAGS) $(C_SRC)/pwd.c -o $(C_OUTPUT)/pwd
+	$(C_CC) $(C_FLAGS) $(C_SRC)/cat.c -o $(C_OUTPUT)/cat
 	$(C_CC) $(C_FLAGS) $(C_SRC)/echo.c -o $(C_OUTPUT)/echo
 	$(C_CC) $(C_FLAGS) $(C_SRC)/mkdir.c -o $(C_OUTPUT)/mkdir
 	$(C_CC) $(C_FLAGS) $(C_SRC)/rmdir.c -o $(C_OUTPUT)/rmdir
