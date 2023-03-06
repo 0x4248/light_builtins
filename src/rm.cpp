@@ -11,6 +11,11 @@
 
 int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
-    std::filesystem::remove(path);
+    if (std::filesystem::exists(path)) {
+        std::filesystem::remove(path);
+    } else {
+        std::cerr << "Can not remove " << std::endl;
+        return 1;
+    }
     return 0;
 }
