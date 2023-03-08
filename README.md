@@ -1,4 +1,6 @@
 # Light Builtin's
+[![CodeFactor](https://www.codefactor.io/repository/github/awesomelewis2007/light_builtins/badge/master)](https://www.codefactor.io/repository/github/awesomelewis2007/light_builtins/overview/master)
+
 This is a repository of the linux builtin commands that is lightweight and fast.
 
 You can use these command in your shell or in your program. There are also C versions of the commands.
