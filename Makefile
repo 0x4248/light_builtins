@@ -1,3 +1,13 @@
+# Light builtins's Makefile
+# A lightweight repository of useful C++/C shell commands
+# GitHub: https://www.github.com/awesomelewis2007/light_builtins
+# License: GNU General Public License v3.0
+#
+# Usage:
+# make - compiles everything
+# make configure_test test_cpp test_c - configures tests and runs tests
+
+
 
 CPP_CC = g++
 CPP_FLAGS = -g -Wall -std=c++23
