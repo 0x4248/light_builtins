@@ -76,5 +76,5 @@ test_c:
 	$(C_OUTPUT)/echo "This is a test"
 	$(C_OUTPUT)/mkdir test
 	$(C_OUTPUT)/rmdir test
-	$(C_OUTPUT)/mv test/test4.txt test/test_mv.txt
+	$(C_OUTPUT)/mv test/test.txt test/test_mv.txt
 	$(C_OUTPUT)/rm test/test_mv.txt
