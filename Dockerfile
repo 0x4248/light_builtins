@@ -3,7 +3,7 @@
 # GitHub: https://www.github.com/awesomelewis2007/light_builtins
 # License: GNU General Public License v3.0
 
-FROM gcc:latest
+FROM gcc:12.2.0
 
 COPY . /usr/src/light_builtins
 
