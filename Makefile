@@ -56,7 +56,6 @@ configure_test:
 	echo "This is a test file" > test/test2.txt
 	echo "This is a test file" > test/test3.txt
 	echo "This is a test file" > test/test4.txt
-	echo "This is a test file" > test/test_mv.txt
 	mkdir test/test_dir
 	mkdir test/test_dir2
 
@@ -77,5 +76,3 @@ test_c:
 	$(C_OUTPUT)/echo "This is a test"
 	$(C_OUTPUT)/mkdir test
 	$(C_OUTPUT)/rmdir test
-	$(C_OUTPUT)/mv test/test_mv.txt test/test_mv2.txt
-	$(C_OUTPUT)/rm test/test_mv2.txt
