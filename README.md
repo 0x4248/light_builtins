@@ -12,9 +12,9 @@ You can use these command in your shell or in your program. There are also C ver
 - `echo` - Display a line of text ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `mkdir` - Create a directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `rmdir` - Remove a directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `rm` - Remove files or directories ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
+- `rm` - Remove files or directories ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `cp` - Copy files and directories ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
-- `mv` - Move (rename) files ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
+- `mv` - Move (rename) files ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 
 ## Build
 To build the project, you need to have `gcc` and `make` installed.

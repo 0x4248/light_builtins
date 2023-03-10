@@ -39,6 +39,8 @@ compile_c:
 	$(C_CC) $(C_FLAGS) $(C_SRC)/echo.c -o $(C_OUTPUT)/echo
 	$(C_CC) $(C_FLAGS) $(C_SRC)/mkdir.c -o $(C_OUTPUT)/mkdir
 	$(C_CC) $(C_FLAGS) $(C_SRC)/rmdir.c -o $(C_OUTPUT)/rmdir
+	$(C_CC) $(C_FLAGS) $(C_SRC)/rm.c -o $(C_OUTPUT)/rm
+	$(C_CC) $(C_FLAGS) $(C_SRC)/mv.c -o $(C_OUTPUT)/mv
 
 clean:
 	rm -rf $(C_OUTPUT)/*
@@ -74,3 +76,5 @@ test_c:
 	$(C_OUTPUT)/echo "This is a test"
 	$(C_OUTPUT)/mkdir test
 	$(C_OUTPUT)/rmdir test
+	$(C_OUTPUT)/mv test/test4.txt test/test_mv.txt
+	$(C_OUTPUT)/rm test/test_mv.txt
