@@ -10,12 +10,12 @@
 
 
 CPP_CC = g++
-CPP_FLAGS = -g -Wall -std=c++23
+CPP_FLAGS = -g -Wall -std=c++23 -Os
 CPP_OUTPUT = bin
 CPP_SRC = src
 
 C_CC = gcc
-C_FLAGS = -g -Wall -std=c2x
+C_FLAGS = -g -Wall -std=c2x -Os
 C_OUTPUT = bin/c
 C_SRC = src/c
 
