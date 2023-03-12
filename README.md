@@ -1,11 +1,11 @@
-# Light Builtin's
+# 📦 Light Builtin's
 [![CodeFactor](https://www.codefactor.io/repository/github/awesomelewis2007/light_builtins/badge/master)](https://www.codefactor.io/repository/github/awesomelewis2007/light_builtins/overview/master)
 
 This is a repository of the linux builtin commands that is lightweight and fast.
 
 You can use these command in your shell or in your program. There are also C versions of the commands.
 
-## Commands List
+## 📝 Commands List
 - `ls` - List directory contents ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `pwd` - Print name of current/working directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 - `cat` - Concatenate files and print on the standard output ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
@@ -16,7 +16,7 @@ You can use these command in your shell or in your program. There are also C ver
 - `cp` - Copy files and directories ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
 - `mv` - Move (rename) files ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
 
-## Build
+## 🔨 Build
 To build the project, you need to have `gcc` and `make` installed.
 
 Then, run the following command:
@@ -36,7 +36,7 @@ To clean the build, run the following command:
 make clean
 ```
 
-## Alternative build
+## 🔨 Alternative build
 If you want to build using sh instead of make, run the following command:
 ```bash
 sh scripts/build_c.sh
@@ -48,4 +48,3 @@ To clean the build, run the following command:
 ```bash
 sh scripts/clean.sh
 ```
-
