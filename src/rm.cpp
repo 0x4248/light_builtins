@@ -11,6 +11,10 @@
 
 int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
+    if (std::filesystem::is_directory(path)) {
+        std::cerr << "Can not remove directory " << std::endl;
+        return 1;
+    }
     if (std::filesystem::exists(path)) {
         std::filesystem::remove(path);
     } else {

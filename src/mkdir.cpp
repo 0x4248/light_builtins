@@ -11,6 +11,11 @@
 
 int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
+    if (std::filesystem::exists(path)) {
+        std::cerr << "Can not create directory " << path << std::endl;
+        std::cerr << "Directory already exists" << std::endl;
+        return 1;
+    }
     std::filesystem::create_directory(path);
     return 0;
 }

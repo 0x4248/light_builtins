@@ -12,6 +12,12 @@
 int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
     std::string path2 = argc > 2 ? argv[2] : ".";
-    std::filesystem::copy(path, path2);
+    try{
+        std::filesystem::copy(path, path2);
+    } catch(std::filesystem::filesystem_error &e){
+        std::cerr << "Can not copy " << path << " to " << path2 << std::endl;
+        std::cerr << e.what() << std::endl;
+        return 1;
+    }
     return 0;
 }
