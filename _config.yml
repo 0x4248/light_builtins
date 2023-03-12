@@ -1,0 +1,4 @@
+remote_theme: pages-themes/minimal@v0.2.0
+title: Light builtins
+description: This is a repository of the linux builtin commands that is lightweight and fast.
+show_downloads: true
