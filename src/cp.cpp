@@ -1,8 +1,9 @@
-// Light builtins's
-// cp - copy files and directories
-// A lightweight repository of useful C++/C shell commands
-// GitHub: https://www.github.com/awesomelewis2007/light_builtins
-// License: GNU General Public License v3.0
+/* Light builtins's
+ * cp - copy files and directories
+ * A lightweight repository of useful C++/C shell commands
+ * GitHub: https://www.github.com/awesomelewis2007/light_builtins
+ * License: GNU General Public License v3.0
+*/
 
 #include <iostream>
 #include <filesystem>
@@ -15,6 +16,10 @@ int main (int argc, char *argv[]) {
     try{
         std::filesystem::copy(path, path2);
     } catch(std::filesystem::filesystem_error &e){
+        /**
+         * If the directory already exists, then we can not create it.
+         * or there is an error copying the file.
+        */
         std::cerr << "Can not copy " << path << " to " << path2 << std::endl;
         std::cerr << e.what() << std::endl;
         return 1;

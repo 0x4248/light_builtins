@@ -1,8 +1,9 @@
-// Light builtins's (C version)
-// echo - display a line of text
-// A lightweight repository of useful C++/C shell commands
-// GitHub: https://www.github.com/awesomelewis2007/light_builtins
-// License: GNU General Public License v3.0
+/* Light builtins's (C version)
+ * echo - display a line of text
+ * A lightweight repository of useful C++/C shell commands
+ * GitHub: https://www.github.com/awesomelewis2007/light_builtins
+ * License: GNU General Public License v3.0
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
