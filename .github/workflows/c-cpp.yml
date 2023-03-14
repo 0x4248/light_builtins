@@ -19,4 +19,4 @@ jobs:
       run: |
         make clean
         make init
-        make ultra_light
+        make compile_ultra_light
