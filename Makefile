@@ -32,6 +32,17 @@ compile_cpp:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/cp.cpp -o $(CPP_OUTPUT)/cp
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/mv.cpp -o $(CPP_OUTPUT)/mv
 
+compile_ultra_light:
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/ls.cpp -o $(CPP_OUTPUT)/ls
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/pwd.cpp -o $(CPP_OUTPUT)/pwd
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/cat.cpp -o $(CPP_OUTPUT)/cat
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/echo.cpp -o $(CPP_OUTPUT)/echo
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/mkdir.cpp -o $(CPP_OUTPUT)/mkdir
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/rmdir.cpp -o $(CPP_OUTPUT)/rmdir
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/rm.cpp -o $(CPP_OUTPUT)/rm
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/cp.cpp -o $(CPP_OUTPUT)/cp
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/mv.cpp -o $(CPP_OUTPUT)/mv
+
 compile_c:
 	$(C_CC) $(C_FLAGS) $(C_SRC)/ls.c -o $(C_OUTPUT)/ls
 	$(C_CC) $(C_FLAGS) $(C_SRC)/pwd.c -o $(C_OUTPUT)/pwd

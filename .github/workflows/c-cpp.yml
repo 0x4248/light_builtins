@@ -15,3 +15,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: make
       run: make
+    - name: make ultra_light
+      run: |
+        make clean
+        make init
+        make ultra_light

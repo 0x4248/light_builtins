@@ -48,3 +48,13 @@ To clean the build, run the following command:
 ```bash
 sh scripts/clean.sh
 ```
+
+## 🏃‍♂️ Ultra light
+
+The ultra light version of the light builtins is in the `src/ultra_light` folder. This version has minimal code and low compile size.
+
+To build the ultra light version, run the following command:
+```bash
+make ultra_light
+```
+The binaries will be in the `bin/` folder.
