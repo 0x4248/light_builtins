@@ -14,6 +14,7 @@ int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
     std::string path2 = argc > 2 ? argv[2] : ".";
     try{
+        /* Try to copy the file or directory*/
         std::filesystem::copy(path, path2);
     } catch(std::filesystem::filesystem_error &e){
         /**

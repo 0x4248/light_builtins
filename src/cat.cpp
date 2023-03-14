@@ -15,6 +15,7 @@ int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
     std::ifstream file(path);
     if (file.is_open()) {
+        /* We need to check if the file is open before reading it*/
         std::string line;
         while (std::getline(file, line)) {
             std::cout << line << std::endl;

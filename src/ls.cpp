@@ -15,6 +15,10 @@ int main (int argc, char *argv[]) {
     for (const auto &entry : std::filesystem::directory_iterator(path)) {
         std::string name = entry.path().filename();
         if (entry.is_directory()) {
+            /* Show / before the directory 
+             * name to help the user know 
+             * its a directory
+             */
             name = "/" + name;
         }
         name.erase(remove(name.begin(), name.end(), '"'), name.end());
