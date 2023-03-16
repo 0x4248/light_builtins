@@ -10,6 +10,9 @@
 #include <string>
 #include <algorithm>
 
+std::string BLUE_BOLD = "\033[1;34m";
+std::string RESET = "\033[0m";
+
 int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
     for (const auto &entry : std::filesystem::directory_iterator(path)) {
@@ -19,7 +22,7 @@ int main (int argc, char *argv[]) {
              * name to help the user know 
              * its a directory
              */
-            name = "/" + name;
+            name = BLUE_BOLD + name + RESET;
         }
         name.erase(remove(name.begin(), name.end(), '"'), name.end());
         std::cout << name << " ";
