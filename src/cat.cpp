@@ -13,11 +13,22 @@
 
 int main (int argc, char *argv[]) {
     std::string path = argc > 1 ? argv[1] : ".";
+    bool print_ln = false;
+    for (int i = 1; i < argc; i++) {
+        if (std::string(argv[i]) == "-ln") {
+            print_ln = true;
+        }
+    }
     std::ifstream file(path);
     if (file.is_open()) {
         /* We need to check if the file is open before reading it*/
         std::string line;
+        int ln = 1;
         while (std::getline(file, line)) {
+            if (print_ln) {
+                std::cout << ln << " ";
+                ln++;
+            }
             std::cout << line << std::endl;
         }
         file.close();
