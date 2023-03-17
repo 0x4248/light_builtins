@@ -12,6 +12,11 @@
 #include <algorithm>
 
 int main (int argc, char *argv[]) {
+    if (argc < 2) {
+        std::cout << "Usage: cat [FILE] [OPTION]" << std::endl;
+        std::cout << "    -ln: Print line numbers" << std::endl;
+        return 1;
+    }
     std::string path = argc > 1 ? argv[1] : ".";
     bool print_ln = false;
     for (int i = 1; i < argc; i++) {
