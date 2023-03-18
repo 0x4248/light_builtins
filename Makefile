@@ -19,7 +19,12 @@ C_FLAGS = -g -Wall -std=c2x -Os
 C_OUTPUT = bin/c
 C_SRC = src/c
 
-all: clean init compile_cpp compile_c
+RUST_CC = rustc
+RUST_FLAGS = 
+RUST_OUTPUT = bin/rust
+RUST_SRC = src/rust
+
+all: clean init compile_cpp compile_c compile_rust
 
 compile_cpp:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ls.cpp -o $(CPP_OUTPUT)/ls
@@ -53,13 +58,24 @@ compile_c:
 	$(C_CC) $(C_FLAGS) $(C_SRC)/rm.c -o $(C_OUTPUT)/rm
 	$(C_CC) $(C_FLAGS) $(C_SRC)/mv.c -o $(C_OUTPUT)/mv
 
+compile_rust:
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/ls.rs -o $(RUST_OUTPUT)/ls
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/pwd.rs -o $(RUST_OUTPUT)/pwd
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/cat.rs -o $(RUST_OUTPUT)/cat
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/echo.rs -o $(RUST_OUTPUT)/echo
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/mkdir.rs -o $(RUST_OUTPUT)/mkdir
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/rmdir.rs -o $(RUST_OUTPUT)/rmdir
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/rm.rs -o $(RUST_OUTPUT)/rm
+
 clean:
 	rm -rf $(C_OUTPUT)/*
 	rm -rf $(CPP_OUTPUT)/*
+	rm -rf $(RUST_OUTPUT)/*
 
 init:
 	mkdir -p $(C_OUTPUT)
 	mkdir -p $(CPP_OUTPUT)
+	mkdir -p $(RUST_OUTPUT)
 
 configure_test:
 	mkdir test

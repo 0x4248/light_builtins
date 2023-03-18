@@ -3,23 +3,29 @@
 
 This is a repository of the linux builtin commands that is lightweight and fast.
 
-You can use these command in your shell or in your program. There are also C versions of the commands.
+The commands are written in C++, C and Rust.
 
 ## 📝 Commands List
-- `ls` - List directory contents ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `pwd` - Print name of current/working directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `cat` - Concatenate files and print on the standard output ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `echo` - Display a line of text ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `mkdir` - Create a directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `rmdir` - Remove a directory ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `rm` - Remove files or directories ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
-- `cp` - Copy files and directories ![C++_logo](https://img.shields.io/badge/cpp-magenta) 
-- `mv` - Move (rename) files ![C++_logo](https://img.shields.io/badge/cpp-magenta) ![C_logo](https://img.shields.io/badge/c-gray)
+- `ls` - List directory contents `C++` `C` `Rust`
+- `pwd` - Print name of current/working directory `C++` `C` `Rust`
+- `cat` - Concatenate files and print on the standard output`C++` `C` `Rust`
+- `echo` - Display a line of text `C++` `C` `Rust`
+- `mkdir` - Create a directory`C++` `C` `Rust`
+- `rmdir` - Remove a directory `C++` `C` `Rust`
+- `rm` - Remove files or directories`C++` `C` `Rust`
+- `cp` - Copy files and directories `C++`
+- `mv` - Move (rename) files `C++` `C`
+
+## 📦 Dependencies
+- `make`
+- `gcc`
+- `g++`
+- `rustc`
 
 ## 🔨 Build
-To build the project, you need to have `gcc` and `make` installed.
 
-Then, run the following command:
+To build the project run the following command:
+
 ```bash
 make
 ```
@@ -58,3 +64,13 @@ To build the ultra light version, run the following command:
 make ultra_light
 ```
 The binaries will be in the `bin/` folder.
+
+## ⚙️ Rust
+The rust version of the commands are in the `src/rust` folder.
+
+To build the rust version, run the following command:
+```bash
+make compile_rust
+```
+
+The binaries will be in the `bin/rust` folder.
