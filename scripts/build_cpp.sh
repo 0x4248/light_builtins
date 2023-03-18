@@ -1,6 +1,6 @@
 # Light builtins's
 # C++ build script
-# A lightweight repository of useful c++/c shell commands
+# A lightweight repository of useful shell commands
 # GitHub: https://www.github.com/awesomelewis2007/light_builtins
 # License: GNU General Public License v3.0
 

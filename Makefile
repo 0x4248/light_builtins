@@ -1,5 +1,5 @@
 # Light builtins's Makefile
-# A lightweight repository of useful C++/C shell commands
+# A lightweight repository of useful shell commands
 # GitHub: https://www.github.com/awesomelewis2007/light_builtins
 # License: GNU General Public License v3.0
 #
@@ -28,7 +28,7 @@ all: clean init compile_cpp compile_c compile_rust
 
 help:
 	@echo "Light builtins's Makefile"
-	@echo "A lightweight repository of useful C++/C shell commands"
+	@echo "A lightweight repository of useful shell commands"
 	@echo "GitHub: https://www.github.com/awesomelewis2007/light_builtins"
 	@echo "License: GNU General Public License v3.0"
 	@echo ""

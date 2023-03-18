@@ -1,6 +1,6 @@
 /* Light builtins's (Rust version)
  * pwd - print name of current/working directory
- * A lightweight repository of useful C++/C shell commands
+ * A lightweight repository of useful shell commands
  * GitHub: https://www.github.com/awesomelewis2007/light_builtins
  * License: GNU General Public License v3.0
 */
