@@ -11,6 +11,10 @@
 #include <algorithm>
 
 int main (int argc, char *argv[]) {
+    if (argc == 1) {
+        std::cout << "Usage: rmdir [-r] [path]" << std::endl;
+        return 0;
+    }
     if (argc > 1 && std::string(argv[1]) == "-r") {
         std::string path = argc > 2 ? argv[2] : ".";
         std::filesystem::remove_all(path);

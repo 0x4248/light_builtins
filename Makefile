@@ -10,7 +10,7 @@
 
 
 CPP_CC = g++
-CPP_FLAGS = -g -Wall -std=c++23 -Os
+CPP_FLAGS = -g -Wall -std=c++17 -Os
 CPP_OUTPUT = bin
 CPP_SRC = src
 
