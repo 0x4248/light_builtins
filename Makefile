@@ -26,6 +26,26 @@ RUST_SRC = src/rust
 
 all: clean init compile_cpp compile_c compile_rust
 
+help:
+	@echo "Light builtins's Makefile"
+	@echo "A lightweight repository of useful C++/C shell commands"
+	@echo "GitHub: https://www.github.com/awesomelewis2007/light_builtins"
+	@echo "License: GNU General Public License v3.0"
+	@echo ""
+	@echo "Usage:"
+	@echo "command                  | description"
+	@echo "-------------------------|--------------------------------"
+	@echo "make                     | compiles everything"
+	@echo "make init                | initializes the bin directory"
+	@echo "make compile_cpp         | compiles C++ builtins"
+	@echo "make compile_ultra_light | compiles C++ builtins with ultra light mode"
+	@echo "make compile_c           | compiles C builtins"
+	@echo "make compile_rust        | compiles Rust builtins"
+	@echo "make clean               | cleans the bin directory"
+	@echo "make configure_test      | configures tests"
+	@echo "make test_cpp            | runs C++ builtins tests"
+	@echo "make test_c              | runs C builtins tests"
+
 compile_cpp:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ls.cpp -o $(CPP_OUTPUT)/ls
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/pwd.cpp -o $(CPP_OUTPUT)/pwd
