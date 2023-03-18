@@ -13,8 +13,8 @@ The commands are written in C++, C and Rust.
 - `mkdir` - Create a directory`C++` `C` `Rust`
 - `rmdir` - Remove a directory `C++` `C` `Rust`
 - `rm` - Remove files or directories`C++` `C` `Rust`
-- `cp` - Copy files and directories `C++`
-- `mv` - Move (rename) files `C++` `C`
+- `cp` - Copy files and directories `C++` `Rust`
+- `mv` - Move (rename) files `C++` `C` `Rust`
 
 For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
 
