@@ -9,9 +9,9 @@ COPY . /usr/src/light_builtins
 
 WORKDIR /usr/src/light_builtins
 
-RUN make
+RUN mkdir bin
 
-RUN rm -rf bin/c
+RUN make compile_cpp
 
 RUN mv bin/* /bin
 
