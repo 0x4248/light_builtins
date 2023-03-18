@@ -3,14 +3,14 @@
 # GitHub: https://www.github.com/awesomelewis2007/light_builtins
 # License: GNU General Public License v3.0
 
-FROM gcc:12.2.0
+FROM rust:1.61
 
 COPY . /usr/src/light_builtins
 
 WORKDIR /usr/src/light_builtins
 
-RUN make init compile_cpp
+RUN make init compile_rust
 
-RUN mv bin/* /bin
+RUN mv bin/rust/* /bin
 
 CMD ["bash"]
