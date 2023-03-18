@@ -16,6 +16,8 @@ The commands are written in C++, C and Rust.
 - `cp` - Copy files and directories `C++`
 - `mv` - Move (rename) files `C++` `C`
 
+For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
+
 ## 📦 Dependencies
 - `make`
 - `gcc`
