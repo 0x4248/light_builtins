@@ -31,4 +31,13 @@ path = "src/rust/rmdir.rs"
 name = "rm"
 path = "src/rust/rm.rs"
 
+[[bin]]
+name = "mv"
+path = "src/rust/mv.rs"
+
+[[bin]]
+name = "cp"
+path = "src/rust/cp.rs"
+
+
 [dependencies]

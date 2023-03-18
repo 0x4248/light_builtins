@@ -10,5 +10,6 @@ This directory contains the documentation for the rust light builtins.
 - [ls](ls.md)
 - [rm](rm.md)
 - [mv](mv.md)
+- [cp](cp.md)
 - [rmdir](rmdir.md)
 - [mkdir](mkdir.md)

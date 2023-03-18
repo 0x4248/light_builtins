@@ -86,6 +86,8 @@ compile_rust:
 	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/mkdir.rs -o $(RUST_OUTPUT)/mkdir
 	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/rmdir.rs -o $(RUST_OUTPUT)/rmdir
 	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/rm.rs -o $(RUST_OUTPUT)/rm
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/cp.rs -o $(RUST_OUTPUT)/cp
+	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/mv.rs -o $(RUST_OUTPUT)/mv
 
 clean:
 	rm -rf $(C_OUTPUT)/*
