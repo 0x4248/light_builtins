@@ -1,0 +1,34 @@
+[package]
+name = "light_builtins"
+version = "1.0.1"
+edition = "2021"
+
+[[bin]]
+name = "cat"
+path = "src/rust/cat.rs"
+
+[[bin]]
+name = "echo"
+path = "src/rust/echo.rs"
+
+[[bin]]
+name = "ls"
+path = "src/rust/ls.rs"
+
+[[bin]]
+name = "pwd"
+path = "src/rust/pwd.rs"
+
+[[bin]]
+name = "mkdir"
+path = "src/rust/mkdir.rs"
+
+[[bin]]
+name = "rmdir"
+path = "src/rust/rmdir.rs"
+
+[[bin]]
+name = "rm"
+path = "src/rust/rm.rs"
+
+[dependencies]
