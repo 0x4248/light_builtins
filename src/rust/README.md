@@ -10,3 +10,9 @@ make compile_rust
 ```
 
 The binaries will be in the `bin/rust` folder.
+
+## Build with cargo
+You can also build the project with `cargo`:
+```bash
+cargo build
+```
