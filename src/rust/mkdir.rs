@@ -19,6 +19,6 @@ fn main() {
     }
     match fs::create_dir(path) {
         Result::Ok(_) => (),
-        Result::Err(error) => panic!("{}", error)
+        Result::Err(_error) => println!("mkdir: cannot create directory '{}': File exists", path),
     }
 }
