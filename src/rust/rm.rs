@@ -18,6 +18,6 @@ fn main(){
     }
     match std::fs::remove_file(path) {
         Result::Ok(_) => (),
-        Result::Err(error) => panic!("{}", error)
+        Result::Err(_error) => println!("rm: cannot remove '{}'", path),
     }
 }
