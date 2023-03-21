@@ -19,7 +19,10 @@ fn main() {
     }
     let content = match fs::read_to_string(path) {
         Result::Ok(value) => value,
-        Result::Err(error) => panic!("{}", error) 
+        Result::Err(_error) => {
+            println!("cat: {}: No such file or directory", path);
+            return;
+        }
     };
   
     println!("{}", content)
