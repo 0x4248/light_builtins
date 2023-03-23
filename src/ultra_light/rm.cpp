@@ -17,13 +17,13 @@ int main (int argc, char *argv[]) {
          * If the directory already exists, then we can not create it.
          * We will print an error message using cerr and return 1.
         */
-        std::cerr << "Can not remove directory " << std::endl;
+        std::cerr << "rm: can not remove directory" << std::endl;
         return 1;
     }
     if (std::filesystem::exists(path)) {
         std::filesystem::remove(path);
     } else {
-        std::cerr << "Can not remove " << std::endl;
+        std::cerr << "rm: can not remove " << path << " no such file or directory" << std::endl;
         return 1;
     }
     return 0;
