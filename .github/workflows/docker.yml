@@ -21,3 +21,13 @@ jobs:
           docker build -f dockerfiles/cpp.dockerfile . --tag ghcr.io/awesomelewis2007/light_builtins_rust:latest
           docker run ghcr.io/awesomelewis2007/light_builtins_rust:latest
           docker push ghcr.io/awesomelewis2007/light_builtins_rust:latest
+      - name: Build docker c image
+        run: |
+          docker build -f dockerfiles/c.dockerfile . --tag ghcr.io/awesomelewis2007/light_builtins_c:latest
+          docker run ghcr.io/awesomelewis2007/light_builtins_c:latest
+          docker push ghcr.io/awesomelewis2007/light_builtins_c:latest
+      - name: Build docker ultra_light image
+        run: |
+          docker build -f dockerfiles/ultra_light.dockerfile . --tag ghcr.io/awesomelewis2007/light_builtins_ultra_light:latest
+          docker run ghcr.io/awesomelewis2007/light_builtins_ultra_light:latest
+          docker push ghcr.io/awesomelewis2007/light_builtins_ultra_light:latest
