@@ -19,8 +19,7 @@ int main (int argc, char *argv[]) {
          * If the directory already exists, then we can not create it.
          * We will print an error message using cerr and return 1.
         */
-        std::cerr << "Can not create directory " << path << std::endl;
-        std::cerr << "Directory already exists" << std::endl;
+        std::cerr << "mkdir: cannot create directory " << path << " since it already exists" << std::endl;
         return 1;
     }
     // Create the directory
