@@ -9,19 +9,45 @@
 #include <filesystem>
 #include <string>
 #include <algorithm>
+#include <cstring>
+#include <fstream>
 
 std::string BLUE_BOLD = "\033[1;34m";
 std::string RESET = "\033[0m";
 
 int main (int argc, char *argv[]) {
-    std::string path = argc > 1 ? argv[1] : ".";
+    std::string path;
+    if (strcmp(argv[1], "-l") == 0) {
+        std::string path = argc > 2 ? argv[2] : ".";
+        for (const auto &entry : std::filesystem::directory_iterator(path)) {
+            std::string name = entry.path().filename();
+            int size;
+            if (entry.is_directory()) {
+                name = BLUE_BOLD + name + RESET;
+                size = 0;
+                for (const auto &entry2 : std::filesystem::directory_iterator(entry.path())) {
+                    std::ifstream file(entry2.path());
+                    file.seekg(0, std::ios::end);
+                    size += file.tellg();
+                }
+            } else {
+                std::ifstream file(name);
+                file.seekg(0, std::ios::end);
+                size = file.tellg();
+            }
+            name.erase(remove(name.begin(), name.end(), '"'), name.end());
+            if (size > 0){
+                std::cout << size << "\t" << name << std::endl;
+            } else {
+                std::cout << "\t"<< name << std::endl;
+            }
+        }
+        return 0;
+    }
+    path = argc > 1 ? argv[1] : ".";
     for (const auto &entry : std::filesystem::directory_iterator(path)) {
         std::string name = entry.path().filename();
         if (entry.is_directory()) {
-            /* Show / before the directory 
-             * name to help the user know 
-             * its a directory
-             */
             name = BLUE_BOLD + name + RESET;
         }
         name.erase(remove(name.begin(), name.end(), '"'), name.end());
