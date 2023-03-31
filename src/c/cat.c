@@ -22,8 +22,9 @@ int main(int argc, char *argv[])
             printf("cat: can't open %s\n", *argv);
             exit(1);
         } else { 
-            while ((c = getc(fp)) != EOF)
+            while ((c = getc(fp)) != EOF) {
                 putchar(c);
+            }
             fclose(fp);
         }
     }
