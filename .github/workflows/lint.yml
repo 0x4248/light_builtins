@@ -13,5 +13,4 @@ jobs:
     - name: C/C++ Linter
       uses: cpp-linter/cpp-linter-action@v2.4.2
       with:
-        files-changed-only: false
         extra-args: -std=c++17
