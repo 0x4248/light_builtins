@@ -21,6 +21,10 @@ fn main() {
         println!("rmdir: failed to remove '{}': Not a directory", path);
         return;
     }
+    if fs::read_dir(path).unwrap().count() != 0 {
+        println!("rmdir: failed to remove '{}': Directory not empty", path);
+        return;
+    }
     match fs::remove_dir(path) {
         Result::Ok(_) => (),
         Result::Err(_error) => println!("rmdir: failed to remove '{}': No such directory", path)
