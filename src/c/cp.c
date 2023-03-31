@@ -33,8 +33,9 @@ int main(int argc, char *argv[])
             printf("cp: can't open %s", file2);
             exit(1);
         } else {
-            while ((c = getc(fp1)) != EOF)
+            while ((c = getc(fp1)) != EOF) {
                 putc(c, fp2);
+            }
             fclose(fp1);
             fclose(fp2);
         }
