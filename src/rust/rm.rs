@@ -16,6 +16,10 @@ fn main(){
     } else {
         path = &args[1];
     }
+    if std::fs::metadata(path).unwrap().is_dir() {
+        println!("rm: cannot remove '{}': Is a directory", path);
+        return;
+    }
     match std::fs::remove_file(path) {
         Result::Ok(_) => (),
         Result::Err(_error) => println!("rm: cannot remove '{}'", path),
