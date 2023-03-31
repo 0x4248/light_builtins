@@ -17,8 +17,12 @@ fn main() {
     } else {
         path = &args[1];
     }
+    if fs::metadata(path).unwrap().is_file() {
+        println!("rmdir: failed to remove '{}': Not a directory", path);
+        return;
+    }
     match fs::remove_dir(path) {
         Result::Ok(_) => (),
-        Result::Err(_error) => println!("rmdir: failed to remove '{}': No such file or directory", path)
+        Result::Err(_error) => println!("rmdir: failed to remove '{}': No such directory", path)
     }
 }
