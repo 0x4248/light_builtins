@@ -8,6 +8,12 @@
 # make configure_test test_cpp test_c - configures tests and runs tests
 
 
+MAJOR_VERSION = 1
+MINOR_VERSION = 1
+PATCH_VERSION = 0
+EXTRA_VERSION = stable
+VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)
+FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
 
 CPP_CC = g++
 CPP_FLAGS = -g -Wall -std=c++17 -Os
@@ -27,25 +33,32 @@ RUST_SRC = src/rust
 all: clean init compile_cpp compile_c compile_rust
 
 help:
-	@echo "Light builtins's Makefile"
+	@echo "\033[1mLight builtins's Makefile\033[0m"
+	@echo "========================================"
+	@echo  "Version: $(FULL_VERSION)"
+	@git rev-parse HEAD
+	@echo "========================================"
 	@echo "A lightweight repository of useful shell commands"
 	@echo "GitHub: https://www.github.com/awesomelewis2007/light_builtins"
 	@echo "License: GNU General Public License v3.0"
 	@echo ""
 	@echo "Usage:"
-	@echo "command                  | description"
-	@echo "-------------------------|--------------------------------"
-	@echo "make                     | compiles everything"
-	@echo "make init                | initializes the bin directory"
-	@echo "make compile_cpp         | compiles C++ builtins"
-	@echo "make compile_ultra_light | compiles C++ builtins with ultra light mode"
-	@echo "make compile_c           | compiles C builtins"
-	@echo "make compile_rust        | compiles Rust builtins"
-	@echo "make clean               | cleans the bin directory"
-	@echo "make configure_test      | configures tests"
-	@echo "make test_cpp            | runs C++ builtins tests"
-	@echo "make test_c              | runs C builtins tests"
-
+	@echo "command                   | description"
+	@echo "--------------------------|--------------------------------"
+	@echo "make                      | compiles everything"
+	@echo "make init                 | initializes the bin directory"
+	@echo "make compile_cpp          | compiles C++ builtins"
+	@echo "make compile_ultra_light  | compiles C++ builtins with ultra light mode"
+	@echo "make compile_c            | compiles C builtins"
+	@echo "make compile_rust         | compiles Rust builtins"
+	@echo "make clean                | cleans the bin directory"
+	@echo "make configure_test       | configures tests"
+	@echo "make test_cpp             | runs C++ builtins tests"
+	@echo "make test_c               | runs C builtins tests"
+	@echo "make update_cargo_version | updates Cargo.toml's version"
+	@echo "make version			     | prints the version and git commit hash"
+	@echo "make help                 | prints this help message"
+	
 compile_cpp:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ls.cpp -o $(CPP_OUTPUT)/ls
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/pwd.cpp -o $(CPP_OUTPUT)/pwd
@@ -126,3 +139,10 @@ test_c:
 	$(C_OUTPUT)/echo "This is a test"
 	$(C_OUTPUT)/mkdir test
 	$(C_OUTPUT)/rmdir test
+
+update_cargo_version:
+	cargo set-version $(VERSION)
+
+version:
+	@echo $(FULL_VERSION)
+	@git rev-parse HEAD
