@@ -69,6 +69,8 @@ compile_cpp:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/rm.cpp -o $(CPP_OUTPUT)/rm
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/cp.cpp -o $(CPP_OUTPUT)/cp
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/mv.cpp -o $(CPP_OUTPUT)/mv
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/touch.cpp -o $(CPP_OUTPUT)/touch
+	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/date.cpp -o $(CPP_OUTPUT)/date
 
 compile_ultra_light:
 	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/ls.cpp -o $(CPP_OUTPUT)/ls
