@@ -5,6 +5,9 @@
  * License: GNU General Public License v3.0
 */
 
+#define CYAN "\033[0;36m"
+#define RESET "\033[0m"
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -33,7 +36,7 @@ int main(int argc, char* argv[]) {
         std::string line;
         while (std::getline(file, line)) {
             if (show_line_numbers) {
-                std::cout << line_number << "\t";
+                std::cout << CYAN << line_number << RESET << "\t";
             }
             std::cout << line << "\n";
             line_number++;
