@@ -8,42 +8,38 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <filesystem>
-#include <algorithm>
 
-int main (int argc, char *argv[]) {
-    if (argc < 2) {
-        std::cout << "Usage: cat [FILE] [OPTION]" << std::endl;
-        std::cout << "    -ln: Print line numbers" << std::endl;
+int main(int argc, char* argv[]) {
+    bool show_line_numbers = false;
+    int file_offset = 1;
+    if (argc >= 2 && std::string(argv[1]) == "-n") {
+        show_line_numbers = true;
+        file_offset = 2;
+    }
+
+    if (argc < file_offset + 1) {
+        std::cerr << "Usage: " << argv[0] << " [-n] <file1> [<file2> ...]\n";
         return 1;
     }
-    std::string path = argc > 1 ? argv[1] : ".";
-    bool print_ln = false;
-    for (int i = 1; i < argc; i++) {
-        if (std::string(argv[i]) == "-ln") {
-            print_ln = true;
+
+    int line_number = 1;
+    for (int i = file_offset; i < argc; ++i) {
+        std::ifstream file(argv[i]);
+        if (!file.is_open()) {
+            std::cerr << "Failed to open file: " << argv[i] << "\n";
+            return 1;
         }
-    }
-    std::ifstream file(path);
-    if (file.is_open()) {
-        /* We need to check if the file is open before reading it*/
+
         std::string line;
-        int ln = 1;
         while (std::getline(file, line)) {
-            if (print_ln) {
-                std::cout << ln << " ";
-                ln++;
+            if (show_line_numbers) {
+                std::cout << line_number << "\t";
             }
-            std::cout << line << std::endl;
+            std::cout << line << "\n";
+            line_number++;
         }
         file.close();
-    } else {
-        /**
-         * If the file is not open, then we assume 
-         * that we can not read from it.
-        */
-        std::cerr << "Could not open file" << std::endl;
-        return 1;
     }
+
     return 0;
 }
