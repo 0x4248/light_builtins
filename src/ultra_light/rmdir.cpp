@@ -10,7 +10,15 @@
 #include <string>
 #include <algorithm>
 
-int main (int argc, char *argv[]) {
+#include "config.h"
+
+int main(int argc, char *argv[]) {
+    if (argc >= 2 && (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
+        std::cout << "Light Builtins (C++ Ultra Light) " << VERSION_MAJOR << "." 
+                  << VERSION_MINOR << "." << VERSION_PATCH << "-" 
+                  << EXTRA_VERSION << std::endl;
+        return 0;
+    }
     if (argc > 1 && std::string(argv[1]) == "-r") {
         std::string path = argc > 2 ? argv[2] : ".";
         std::filesystem::remove_all(path);

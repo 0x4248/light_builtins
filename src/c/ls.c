@@ -12,8 +12,13 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-int main(int argc, char *argv[])
-{
+#include "config.h"
+
+int main(int argc, char *argv[]) {
+    if (argc >= 2 && (strcmp(argv[1], "-v") == 0 || strcmp(argv[1], "--version") == 0)) {
+        printf("Light Builtins (C) %d.%d.%d-%s\n", VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, EXTRA_VERSION);
+        return 0;
+    }
     DIR *dir;
     struct dirent *ent;
     char *path = argv[1];
