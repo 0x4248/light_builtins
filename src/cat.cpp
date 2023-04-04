@@ -12,6 +12,8 @@
 #include <fstream>
 #include <string>
 
+#include "config.h"
+
 int main(int argc, char* argv[]) {
     bool show_line_numbers = false;
     int file_offset = 1;
@@ -19,9 +21,17 @@ int main(int argc, char* argv[]) {
         show_line_numbers = true;
         file_offset = 2;
     }
-
+    if (argc >= 2 && (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
+        std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "." 
+                  << VERSION_MINOR << "." << VERSION_PATCH << "-" 
+                  << EXTRA_VERSION << std::endl;
+        return 0;
+    }
     if (argc < file_offset + 1) {
         std::cerr << "Usage: " << argv[0] << " [-n] <file1> [<file2> ...]\n";
+        std::cerr << "Light Builtins (C++) " << VERSION_MAJOR << "." 
+                  << VERSION_MINOR << "." << VERSION_PATCH << "-" 
+                  << EXTRA_VERSION << std::endl;
         return 1;
     }
 

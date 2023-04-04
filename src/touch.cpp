@@ -11,7 +11,15 @@
 #include <chrono>
 #include <ctime>
 
+#include "config.h"
+
 int main(int argc, char *argv[]) {
+    if (argc >= 2 && (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
+        std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "." 
+                  << VERSION_MINOR << "." << VERSION_PATCH << "-" 
+                  << EXTRA_VERSION << std::endl;
+        return 0;
+    }
     if (argc != 2) {
         std::cerr << "Usage: touch [Filename]" << std::endl;
         return 1;

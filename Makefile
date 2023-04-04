@@ -16,12 +16,12 @@ VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)
 FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
 
 CPP_CC = g++
-CPP_FLAGS = -g -Wall -std=c++17 -Os
+CPP_FLAGS = -g -Wall -std=c++17 -Os -I include
 CPP_OUTPUT = bin
 CPP_SRC = src
 
 C_CC = gcc
-C_FLAGS = -g -Wall -std=c2x -Os
+C_FLAGS = -g -Wall -std=c2x -Os -I include
 C_OUTPUT = bin/c
 C_SRC = src/c
 

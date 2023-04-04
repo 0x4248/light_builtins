@@ -8,7 +8,15 @@
 #include <iostream>
 #include <ctime>
 
-int main() {
+#include "config.h"
+
+int main(int argc, char *argv[]) {
+    if (argc >= 2 && (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
+        std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "." 
+                  << VERSION_MINOR << "." << VERSION_PATCH << "-" 
+                  << EXTRA_VERSION << std::endl;
+        return 0;
+    }
     std::time_t now = std::time(nullptr);
     char date[100];
     std::strftime(date, sizeof(date), "%a %b %d %H:%M:%S %Z %Y", std::localtime(&now));

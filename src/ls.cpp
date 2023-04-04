@@ -12,10 +12,18 @@
 #include <cstring>
 #include <fstream>
 
+#include "config.h"
+
 std::string BLUE_BOLD = "\033[1;34m";
 std::string RESET = "\033[0m";
 
 int main (int argc, char *argv[]) {
+    if (argc >= 2 && (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
+        std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "." 
+                  << VERSION_MINOR << "." << VERSION_PATCH << "-" 
+                  << EXTRA_VERSION << std::endl;
+        return 0;
+    }
     std::string path;
     if (strcmp(argv[1], "-l") == 0) {
         std::string path = argc > 2 ? argv[2] : ".";
