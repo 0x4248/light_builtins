@@ -5,3 +5,9 @@ Move a file or directory to a new location.
 ```
 mv [SOURCE] [DESTINATION]
 ```
+
+## Options
+
+|    Option    |          Description          |
+|--------------|-------------------------------|
+| -v --version | Show the version and exit     |

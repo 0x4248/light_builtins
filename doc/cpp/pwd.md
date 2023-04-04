@@ -5,3 +5,9 @@ Print the current working directory.
 ```
 pwd
 ```
+
+## Options
+
+|    Option    |          Description          |
+|--------------|-------------------------------|
+| -v --version | Show the version and exit     |

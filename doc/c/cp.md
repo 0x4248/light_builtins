@@ -5,3 +5,9 @@ Copy files and directories.
 ```
 cp [SOURCE] [DESTINATION]
 ```
+
+## Options
+
+|    Option    |          Description          |
+|--------------|-------------------------------|
+| -v --version | Show the version and exit     |

@@ -8,6 +8,7 @@ cat [FILE] [OPTION]
 
 ## Options
 
-| Option | Description |
-|--------|-------------|
-| -ln    | Number all output lines |
+|    Option    |          Description          |
+|--------------|-------------------------------|
+| -ln          | Number all output lines       |
+| -v --version | Show the version and exit     |

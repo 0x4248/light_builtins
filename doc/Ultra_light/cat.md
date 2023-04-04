@@ -5,3 +5,10 @@ Concatenate files and print on the standard output
 ```
 cat [FILE] [OPTION]
 ```
+
+## Options
+
+|    Option    |          Description          |
+|--------------|-------------------------------|
+| -ln          | Number all output lines       |
+| -v --version | Show the version and exit     |
