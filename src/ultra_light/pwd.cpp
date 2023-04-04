@@ -1,4 +1,4 @@
-/* Light builtins's
+/* Light builtins's (Ultra Light)
  * pwd - print name of current/working directory
  * A lightweight repository of useful shell commands
  * GitHub: https://www.github.com/awesomelewis2007/light_builtins

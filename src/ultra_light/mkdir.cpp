@@ -1,4 +1,4 @@
-/* Light builtins's
+/* Light builtins's (Ultra Light)
  * mkdir - make directories
  * A lightweight repository of useful shell commands
  * GitHub: https://www.github.com/awesomelewis2007/light_builtins

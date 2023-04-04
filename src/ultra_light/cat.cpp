@@ -1,4 +1,4 @@
-/* Light builtins's
+/* Light builtins's (Ultra Light)
  * cat - concatenate files and print on the standard output
  * A lightweight repository of useful shell commands
  * GitHub: https://www.github.com/awesomelewis2007/light_builtins
