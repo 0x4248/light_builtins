@@ -15,8 +15,8 @@ The commands are written in C++, C and Rust.
 - `rm` - Remove files or directories`C++` `C` `Rust`
 - `cp` - Copy files and directories `C++` `Rust`
 - `mv` - Move (rename) files `C++` `C` `Rust`
-- `touch` - Change file timestamps `C++`
-- `date` - Display the current time and date `C++`
+- `touch` - Change file timestamps `C++` `C`
+- `date` - Display the current time and date `C++` `C`
 
 For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
 

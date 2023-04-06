@@ -93,6 +93,8 @@ compile_c:
 	$(C_CC) $(C_FLAGS) $(C_SRC)/rm.c -o $(C_OUTPUT)/rm
 	$(C_CC) $(C_FLAGS) $(C_SRC)/mv.c -o $(C_OUTPUT)/mv
 	$(C_CC) $(C_FLAGS) $(C_SRC)/cp.c -o $(C_OUTPUT)/cp
+	$(C_CC) $(C_FLAGS) $(C_SRC)/touch.c -o $(C_OUTPUT)/touch
+	$(C_CC) $(C_FLAGS) $(C_SRC)/date.c -o $(C_OUTPUT)/date
 
 compile_rust:
 	$(RUST_CC) $(RUST_FLAGS) $(RUST_SRC)/ls.rs -o $(RUST_OUTPUT)/ls
