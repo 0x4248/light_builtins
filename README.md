@@ -41,6 +41,20 @@ make compile_c
 ```
 The binaries will be in the `bin/c` folder.
 
+If you want to build the Rust versions of the commands, run the following command:
+```bash
+make compile_rust
+```
+
+The binaries will be in the `bin/rust` folder.
+
+If you want to build the ultra light versions of the commands, run the following command:
+```bash
+make ultra_light
+```
+
+The binaries will be in the `bin` folder.
+
 To clean the build, run the following command:
 ```bash
 make clean
