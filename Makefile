@@ -4,7 +4,8 @@
 # License: GNU General Public License v3.0
 #
 # Usage:
-# make - compiles everything
+# make - compiles C, C++ and Rust
+# make compile_ultra_light - compiles ultra light
 # make configure_test test_cpp test_c - configures tests and runs tests
 
 
