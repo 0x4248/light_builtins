@@ -6,15 +6,15 @@ This is a repository of the linux builtin commands that is lightweight and fast.
 The commands are written in C++, C and Rust.
 
 ## 📝 Commands List
-- `ls` - List directory contents `C++` `C` `Rust`
-- `pwd` - Print name of current/working directory `C++` `C` `Rust`
-- `cat` - Concatenate files and print on the standard output`C++` `C` `Rust`
-- `echo` - Display a line of text `C++` `C` `Rust`
-- `mkdir` - Create a directory`C++` `C` `Rust`
-- `rmdir` - Remove a directory `C++` `C` `Rust`
-- `rm` - Remove files or directories`C++` `C` `Rust`
-- `cp` - Copy files and directories `C++` `Rust`
-- `mv` - Move (rename) files `C++` `C` `Rust`
+- `ls` - List directory contents `C++` `C` `Ultra light` `Rust`
+- `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust`
+- `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust`
+- `echo` - Display a line of text `C++` `C` `Ultra light` `Rust`
+- `mkdir` - Create a directory`C++` `C` `Ultra light` `Rust`
+- `rmdir` - Remove a directory `C++` `C` `Ultra light` `Rust`
+- `rm` - Remove files or directories`C++` `C` `Ultra light` `Rust`
+- `cp` - Copy files and directories `C++` `Ultra light` `Rust`
+- `mv` - Move (rename) files `C++` `C` `Ultra light` `Rust`
 - `touch` - Change file timestamps `C++` `C`
 - `date` - Display the current time and date `C++` `C`
 
