@@ -7,7 +7,7 @@
 # make - compiles C, C++ and Rust
 # make compile_ultra_light - compiles ultra light
 # make configure_test test_cpp test_c - configures tests and runs tests
-
+# make help - show help message
 
 MAJOR_VERSION = 1
 MINOR_VERSION = 2
