@@ -1,3 +1,22 @@
 {
-    "C_Cpp.default.cppStandard": "c++17"
+    "C_Cpp.default.cppStandard": "c++17",
+    "makefile.configurations": [
+
+        {
+
+            "name": "MyConfiguration",
+
+            "problemMatchers": [
+
+                "$gcc"
+
+            ],
+
+        },
+    ],
+    "makefile.compileCommandsPath": ".vscode/compile_commands.json",
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
