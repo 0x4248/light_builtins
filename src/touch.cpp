@@ -11,6 +11,7 @@
 #include <iostream>
 #include <chrono>
 #include <ctime>
+#include <string>
 
 #include "config.h"
 
