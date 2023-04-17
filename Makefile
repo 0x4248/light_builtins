@@ -16,23 +16,25 @@ EXTRA_VERSION = stable
 VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)
 FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
 
+SRC = src
+
 CPP_CC = g++
 CPP_FLAGS = -g -Wall -std=c++17 -Os -I include
 CPP_OUTPUT = bin
-CPP_SRC = src
 
 C_CC = gcc
 C_FLAGS = -g -Wall -std=c2x -Os -I include
 C_OUTPUT = bin/c
 C_SRC = src/c
 
+ULTRA_LIGHT_OUTPUT = bin/ultra_light
+
 RUST_CC = rustc
 RUST_FLAGS = 
 RUST_OUTPUT = bin/rust
 RUST_SRC = src/rust
 
-all: clean init compile_cpp compile_c compile_rust
-
+all: clean init compile_cpp compile_c compile_ultra_light compile_rust
 help:
 	@echo "\033[1mLight builtins's Makefile\033[0m"
 	@echo "========================================"
@@ -61,28 +63,28 @@ help:
 	@echo "make help                 | prints this help message"
 	
 compile_cpp:
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ls.cpp -o $(CPP_OUTPUT)/ls
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/pwd.cpp -o $(CPP_OUTPUT)/pwd
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/cat.cpp -o $(CPP_OUTPUT)/cat
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/echo.cpp -o $(CPP_OUTPUT)/echo
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/mkdir.cpp -o $(CPP_OUTPUT)/mkdir
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/rmdir.cpp -o $(CPP_OUTPUT)/rmdir
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/rm.cpp -o $(CPP_OUTPUT)/rm
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/cp.cpp -o $(CPP_OUTPUT)/cp
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/mv.cpp -o $(CPP_OUTPUT)/mv
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/touch.cpp -o $(CPP_OUTPUT)/touch
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/date.cpp -o $(CPP_OUTPUT)/date
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/ls.cpp -o $(CPP_OUTPUT)/ls
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/pwd.cpp -o $(CPP_OUTPUT)/pwd
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/cat.cpp -o $(CPP_OUTPUT)/cat
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/echo.cpp -o $(CPP_OUTPUT)/echo
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/mkdir.cpp -o $(CPP_OUTPUT)/mkdir
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/rmdir.cpp -o $(CPP_OUTPUT)/rmdir
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/rm.cpp -o $(CPP_OUTPUT)/rm
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/cp.cpp -o $(CPP_OUTPUT)/cp
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/mv.cpp -o $(CPP_OUTPUT)/mv
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/touch.cpp -o $(CPP_OUTPUT)/touch
+	$(CPP_CC) $(CPP_FLAGS) $(SRC)/date.cpp -o $(CPP_OUTPUT)/date
 
 compile_ultra_light:
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/ls.cpp -o $(CPP_OUTPUT)/ls
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/pwd.cpp -o $(CPP_OUTPUT)/pwd
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/cat.cpp -o $(CPP_OUTPUT)/cat
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/echo.cpp -o $(CPP_OUTPUT)/echo
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/mkdir.cpp -o $(CPP_OUTPUT)/mkdir
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/rmdir.cpp -o $(CPP_OUTPUT)/rmdir
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/rm.cpp -o $(CPP_OUTPUT)/rm
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/cp.cpp -o $(CPP_OUTPUT)/cp
-	$(CPP_CC) $(CPP_FLAGS) $(CPP_SRC)/ultra_light/mv.cpp -o $(CPP_OUTPUT)/mv
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/ls.c -o $(ULTRA_LIGHT_OUTPUT)/ls
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/pwd.c -o $(ULTRA_LIGHT_OUTPUT)/pwd
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/cat.c -o $(ULTRA_LIGHT_OUTPUT)/cat
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/echo.c -o $(ULTRA_LIGHT_OUTPUT)/echo
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/mkdir.c -o $(ULTRA_LIGHT_OUTPUT)/mkdir
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/rmdir.c -o $(ULTRA_LIGHT_OUTPUT)/rmdir
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/rm.c -o $(ULTRA_LIGHT_OUTPUT)/rm
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/cp.c -o $(ULTRA_LIGHT_OUTPUT)/cp
+	$(C_CC) $(C_FLAGS) $(SRC)/ultra_light/mv.c -o $(ULTRA_LIGHT_OUTPUT)/mv
 
 compile_c:
 	$(C_CC) $(C_FLAGS) $(C_SRC)/ls.c -o $(C_OUTPUT)/ls
@@ -117,6 +119,7 @@ init:
 	mkdir -p $(C_OUTPUT)
 	mkdir -p $(CPP_OUTPUT)
 	mkdir -p $(RUST_OUTPUT)
+	mkdir -p $(ULTRA_LIGHT_OUTPUT)
 
 configure_test:
 	mkdir test
