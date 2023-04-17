@@ -16,7 +16,4 @@
     ],
     "makefile.compileCommandsPath": ".vscode/compile_commands.json",
     "sonarlint.pathToCompileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
-    "files.associations": {
-        "iostream": "cpp"
-    }
 }
