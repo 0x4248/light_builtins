@@ -19,11 +19,11 @@ FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
 SRC = src
 
 CPP_CC = g++
-CPP_FLAGS = -g -Wall -std=c++17 -Os -I include
+CPP_FLAGS = -g -Wall -Wextra -std=c++17 -Os -I include
 CPP_OUTPUT = bin
 
 C_CC = gcc
-C_FLAGS = -g -Wall -std=c2x -Os -I include
+C_FLAGS = -g -Wall -Wextra -std=c2x -Os -I include
 C_OUTPUT = bin/c
 C_SRC = src/c
 
