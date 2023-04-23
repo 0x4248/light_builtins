@@ -1,7 +1,7 @@
 /* Light builtins's (config.h)
  * A lightweight repository of useful shell commands
  * GitHub: https://www.github.com/awesomelewis2007/light_builtins
- * License: GNU General Public License v3.0
+ * Licence: GNU General Public License v3.0
  * By: Lewis Evans
  * 
  * This file contains the configuration for the Light builtins project.

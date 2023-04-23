@@ -1,7 +1,7 @@
 # Light builtins's Makefile
 # A lightweight repository of useful shell commands
 # GitHub: https://www.github.com/awesomelewis2007/light_builtins
-# License: GNU General Public License v3.0
+# Licence: GNU General Public License v3.0
 # By: Lewis Evans
 #
 # Usage:
@@ -44,7 +44,7 @@ help:
 	@echo "========================================"
 	@echo "A lightweight repository of useful shell commands"
 	@echo "GitHub: https://www.github.com/awesomelewis2007/light_builtins"
-	@echo "License: GNU General Public License v3.0"
+	@echo "Licence: GNU General Public License v3.0"
 	@echo ""
 	@echo "Usage:"
 	@echo "command                   | description"
