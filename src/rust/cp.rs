@@ -9,7 +9,6 @@
 use std::env;
 use std::fs;
 
-
 fn main() {
     let args: Vec<String> = env::args().collect();
     let path;
@@ -25,6 +24,9 @@ fn main() {
         new_path = &args[2];
     }
     if let Err(_err) = fs::copy(path, new_path) {
-        println!("cp: cannot copy '{}' to '{}': No such file or directory", path, new_path);
+        println!(
+            "cp: cannot copy '{}' to '{}': No such file or directory",
+            path, new_path
+        );
     }
 }

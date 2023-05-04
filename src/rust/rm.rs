@@ -8,7 +8,7 @@
 
 use std::env;
 
-fn main(){
+fn main() {
     let args: Vec<String> = env::args().collect();
     let path;
     if args.len() == 1 {

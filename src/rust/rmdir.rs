@@ -28,6 +28,6 @@ fn main() {
     }
     match fs::remove_dir(path) {
         Result::Ok(_) => (),
-        Result::Err(_error) => println!("rmdir: failed to remove '{}': No such directory", path)
+        Result::Err(_error) => println!("rmdir: failed to remove '{}': No such directory", path),
     }
 }

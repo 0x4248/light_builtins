@@ -18,7 +18,6 @@ pub mod colour {
     pub const RESET: &str = "\x1b[0m";
 }
 
-
 fn main() {
     let args: Vec<String> = env::args().collect();
     let path;
@@ -40,13 +39,11 @@ fn main() {
             let mode = perms.mode();
             if mode & 0o111 != 0 {
                 print!("{}{}{} ", colour::GREEN, file, colour::RESET);
-            }
-            else if mode & 0o444 != 0 {
+            } else if mode & 0o444 != 0 {
                 print!("{}{}{} ", colour::RED, file, colour::RESET);
             } else {
                 print!("{} ", file);
             }
-
         }
     }
     println!("");

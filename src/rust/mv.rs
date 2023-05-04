@@ -9,7 +9,7 @@
 use std::env;
 use std::fs;
 
-fn main(){
+fn main() {
     let args: Vec<String> = env::args().collect();
     let path;
     let new_path;
@@ -25,7 +25,9 @@ fn main(){
     }
     /* move files */
     if let Err(_err) = fs::rename(path, new_path) {
-        println!("mv: cannot move '{}' to '{}': No such file or directory", path, new_path);
+        println!(
+            "mv: cannot move '{}' to '{}': No such file or directory",
+            path, new_path
+        );
     }
-
 }
