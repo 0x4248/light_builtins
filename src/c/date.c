@@ -6,11 +6,11 @@
  * By: Lewis Evans
  */
 
+#include "config.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
-#include "config.h"
+#include <time.h>
 
 int main(int argc, char *argv[]) {
     if (argc >= 2 &&
