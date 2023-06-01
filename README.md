@@ -7,6 +7,7 @@ This is a repository of the linux builtin commands that is lightweight and fast.
 The commands are written in C++, C and Rust.
 
 ## 📝 Commands List
+Here is a list of the commands and their availability:
 - `ls` - List directory contents `C++` `C` `Ultra light` `Rust`
 - `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust`
 - `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust`
@@ -17,7 +18,7 @@ The commands are written in C++, C and Rust.
 - `cp` - Copy files and directories `C++` `Ultra light` `Rust`
 - `mv` - Move (rename) files `C++` `C` `Ultra light` `Rust`
 - `touch` - Change file timestamps `C++` `C` `Ultra light` `Rust`
-- `date` - Display the current time and date `C++` `C` `Ultra light`
+- `date` - Display the current time and date `C++` `C` `Ultra light` `Rust`
 
 For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
 
