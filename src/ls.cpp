@@ -19,7 +19,8 @@ std::string BLUE_BOLD = "\033[1;34m";
 std::string RESET = "\033[0m";
 
 int main(int argc, char *argv[]) {
-    /* Check if the user has provided the -v or --version flag to show the version */
+    /* Check if the user has provided the -v or --version flag to show the
+     * version */
     if (argc >= 2 &&
         (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
         /* Print the version information */
@@ -42,7 +43,8 @@ int main(int argc, char *argv[]) {
                 /* Format the directory name with color */
                 name = BLUE_BOLD + name + RESET;
                 size = 0;
-                /* Loop through each file in the directory and get the total size */
+                /* Loop through each file in the directory and get the total
+                 * size */
                 for (const auto &entry2 :
                      std::filesystem::directory_iterator(entry.path())) {
                     std::ifstream file(entry2.path());
