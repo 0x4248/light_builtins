@@ -13,6 +13,8 @@
 #include "config.h"
 
 int main(int argc, char *argv[]) {
+    /* Check if the user has provided the -v or --version flag to show the
+     * version */
     if (argc >= 2 &&
         (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
         std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "."
@@ -20,8 +22,10 @@ int main(int argc, char *argv[]) {
                   << EXTRA_VERSION << std::endl;
         return 0;
     }
+    /* Check if the user has provided the correct number of arguments */
     std::time_t now = std::time(nullptr);
     char date[100];
+    /* Format the date and time */
     std::strftime(date, sizeof(date), "%a %b %d %H:%M:%S %Z %Y",
                   std::localtime(&now));
     std::cout << date << std::endl;
