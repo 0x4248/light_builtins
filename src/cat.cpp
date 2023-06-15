@@ -18,10 +18,12 @@
 int main(int argc, char *argv[]) {
     bool show_line_numbers = false;
     int file_offset = 1;
+    /* Check if the user has provided the -n flag to show line numbers */
     if (argc >= 2 && std::string(argv[1]) == "-n") {
         show_line_numbers = true;
         file_offset = 2;
     }
+    /* Check if the user has provided the -v or --version flag to show the version */
     if (argc >= 2 &&
         (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
         std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "."
@@ -29,6 +31,7 @@ int main(int argc, char *argv[]) {
                   << EXTRA_VERSION << std::endl;
         return 0;
     }
+    /* Check if the user has provided the correct number of arguments */
     if (argc < file_offset + 1) {
         std::cerr << "Usage: " << argv[0] << " [-n] <file1> [<file2> ...]\n";
         std::cerr << "Light Builtins (C++) " << VERSION_MAJOR << "."
@@ -38,17 +41,22 @@ int main(int argc, char *argv[]) {
     }
 
     int line_number = 1;
+    /* Loop through each file provided by the user */
     for (int i = file_offset; i < argc; ++i) {
         std::ifstream file(argv[i]);
+        /* Check if the file exists */
         if (!file.good()) {
             std::cerr << "File not found: " << argv[i] << "\n";
             return 1;
-        } else if (!file.is_open()) {
+        } 
+        /* Check if the file can be opened */
+        else if (!file.is_open()) {
             std::cerr << "Failed to open file: " << argv[i] << "\n";
             return 1;
         }
 
         std::string line;
+        /* Read each line of the file and print it to the console */
         while (std::getline(file, line)) {
             if (show_line_numbers) {
                 std::cout << CYAN << line_number << RESET << "\t";
