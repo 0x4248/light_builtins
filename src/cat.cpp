@@ -40,7 +40,10 @@ int main(int argc, char *argv[]) {
     int line_number = 1;
     for (int i = file_offset; i < argc; ++i) {
         std::ifstream file(argv[i]);
-        if (!file.is_open()) {
+        if (!file.good()) {
+            std::cerr << "File not found: " << argv[i] << "\n";
+            return 1;
+        } else if (!file.is_open()) {
             std::cerr << "Failed to open file: " << argv[i] << "\n";
             return 1;
         }
