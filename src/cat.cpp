@@ -23,7 +23,8 @@ int main(int argc, char *argv[]) {
         show_line_numbers = true;
         file_offset = 2;
     }
-    /* Check if the user has provided the -v or --version flag to show the version */
+    /* Check if the user has provided the -v or --version flag to show the
+     * version */
     if (argc >= 2 &&
         (std::string(argv[1]) == "-v" || std::string(argv[1]) == "--version")) {
         std::cout << "Light Builtins (C++) " << VERSION_MAJOR << "."
@@ -48,7 +49,7 @@ int main(int argc, char *argv[]) {
         if (!file.good()) {
             std::cerr << "File not found: " << argv[i] << "\n";
             return 1;
-        } 
+        }
         /* Check if the file can be opened */
         else if (!file.is_open()) {
             std::cerr << "Failed to open file: " << argv[i] << "\n";
