@@ -1,0 +1,16 @@
+{
+    "name": "light_builtins",
+    "description": "This is a repository of the linux builtin commands that is lightweight and fast.",
+    "version": "",
+    "main_file": "none",
+    "author": "Lewis Evans",
+    "license": "GNU General Public License v3.0",
+    "url": "/light_builtins",
+    "email": "none",
+    "languages": [
+        "shell",
+        "c++",
+        "c"
+    ],
+    "actions": {}
+}
