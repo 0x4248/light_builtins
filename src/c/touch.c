@@ -1,7 +1,7 @@
 /* Light builtins's (C Version)
  * touch - create a new file or update the timestamp of an existing file
  * A lightweight repository of useful shell commands
- * GitHub: https://www.github.com/awesomelewis2007/light_builtins
+ * GitHub: https://www.github.com/lewisevans2007/light_builtins
  * Licence: GNU General Public License v3.0
  * By: Lewis Evans
  */
