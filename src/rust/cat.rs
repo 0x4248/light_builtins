@@ -10,17 +10,17 @@ use std::env;
 use std::fs;
 
 fn main() {
-    let args: Vec<String> = env::args().collect(); 
+    let args: Vec<String> = env::args().collect();
     /* Get the command line arguments */
     let path;
-    if args.len() == 1 { 
+    if args.len() == 1 {
         /* Check if a file path was provided */
         /* Print an error message and exit the program */
-        println!("cat: missing file operand"); 
+        println!("cat: missing file operand");
         return;
     } else {
         /* Get the file path from the command line arguments */
-        path = &args[1]; 
+        path = &args[1];
     }
     /* Read the file contents */
     let content = match fs::read_to_string(path) {
