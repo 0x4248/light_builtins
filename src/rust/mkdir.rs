@@ -12,12 +12,14 @@ use std::fs;
 fn main() {
     let args: Vec<String> = env::args().collect();
     let path;
+    /* Get the command line arguments */
     if args.len() == 1 {
         println!("mkdir: missing operand");
         return;
     } else {
         path = &args[1];
     }
+    /* Create the directory */
     match fs::create_dir(path) {
         Result::Ok(_) => (),
         Result::Err(_error) => println!("mkdir: cannot create directory '{}': File exists", path),

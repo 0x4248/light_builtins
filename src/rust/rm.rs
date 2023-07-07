@@ -9,18 +9,22 @@
 use std::env;
 
 fn main() {
+    /* Get the command line arguments */
     let args: Vec<String> = env::args().collect();
     let path;
     if args.len() == 1 {
+        /* Check if a file path was provided */
         println!("rm: missing operand");
         return;
     } else {
         path = &args[1];
     }
+    /* Remove the file */
     if std::fs::metadata(path).unwrap().is_dir() {
         println!("rm: cannot remove '{}': Is a directory", path);
         return;
     }
+    /* Remove the file */
     match std::fs::remove_file(path) {
         Result::Ok(_) => (),
         Result::Err(_error) => println!("rm: cannot remove '{}'", path),

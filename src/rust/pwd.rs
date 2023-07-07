@@ -9,7 +9,9 @@
 use std::env;
 
 fn main() {
+    /* Get the current working directory */
     let cwd = env::current_dir().unwrap();
     let cwd = cwd.to_str().unwrap();
+    /* Print the current working directory */
     println!("{}", cwd);
 }
