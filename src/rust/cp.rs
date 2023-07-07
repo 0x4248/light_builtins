@@ -13,6 +13,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     let path;
     let new_path;
+    /* Get the command line arguments */
     if args.len() == 1 {
         println!("cp: missing file operand");
         return;
@@ -23,7 +24,9 @@ fn main() {
         path = &args[1];
         new_path = &args[2];
     }
+    /* Copy the file */
     if let Err(_err) = fs::copy(path, new_path) {
+        /* Print an error message and exit the program */
         println!(
             "cp: cannot copy '{}' to '{}': No such file or directory",
             path, new_path
