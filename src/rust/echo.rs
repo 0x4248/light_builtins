@@ -12,7 +12,7 @@ fn main() {
     /* Get the command line arguments */
     let args: Vec<String> = env::args().collect();
     let mut output = String::new();
-    
+
     for i in 1..args.len() {
         output.push_str(&args[i]);
         output.push(' ');
