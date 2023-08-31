@@ -9,6 +9,7 @@
 import os
 import sys
 
+
 def main(args):
     if len(args) == 0:
         args = [os.getcwd()]
@@ -21,6 +22,7 @@ def main(args):
                     print(file)
         else:
             print(arg)
+
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
