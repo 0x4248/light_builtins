@@ -9,6 +9,7 @@
 import os
 import sys
 
+
 def main(args):
     if len(args) < 1:
         print("touch: missing file operand")
@@ -20,12 +21,13 @@ def main(args):
         print("touch: cannot create file '" + args[0] + "': File exists")
         return 1
     try:
-        with open(args[0], 'w') as f:
+        with open(args[0], "w") as f:
             f.write("")
     except:
         print("touch: cannot create file '" + args[0] + "': Permission denied")
         return 1
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))

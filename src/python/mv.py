@@ -9,11 +9,12 @@
 import os
 import sys
 
+
 def main(args):
     if len(args) < 2:
         print("mv: missing file operand")
         return 1
-    if  len(args) > 2:
+    if len(args) > 2:
         print("mv: extra operand")
         return 1
     if not os.path.exists(args[0]):
@@ -29,6 +30,7 @@ def main(args):
         print("mv: cannot stat '" + args[1] + "': Permission denied")
         return 1
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
