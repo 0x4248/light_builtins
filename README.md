@@ -12,13 +12,13 @@ Here is a list of the commands and their availability:
 - `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust` `Python`
 - `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust` `Python`
 - `echo` - Display a line of text `C++` `C` `Ultra light` `Rust` `Python`
-- `mkdir` - Create a directory`C++` `C` `Ultra light` `Rust`
-- `rmdir` - Remove a directory `C++` `C` `Ultra light` `Rust`
-- `rm` - Remove files or directories`C++` `C` `Ultra light` `Rust`
-- `cp` - Copy files and directories `C++` `Ultra light` `Rust`
-- `mv` - Move (rename) files `C++` `C` `Ultra light` `Rust`
-- `touch` - Change file timestamps `C++` `C` `Ultra light` `Rust`
-- `date` - Display the current time and date `C++` `C` `Ultra light` `Rust`
+- `mkdir` - Create a directory`C++` `C` `Ultra light` `Rust` `Python`
+- `rmdir` - Remove a directory `C++` `C` `Ultra light` `Rust` `Python` 
+- `rm` - Remove files or directories`C++` `C` `Ultra light` `Rust` `Python`
+- `cp` - Copy files and directories `C++` `Ultra light` `Rust` `Python`
+- `mv` - Move (rename) files `C++` `C` `Ultra light` `Rust` `Python`
+- `touch` - Change file timestamps `C++` `C` `Ultra light` `Rust` `Python`
+- `date` - Display the current time and date `C++` `C` `Ultra light` `Rust` `Python`
 
 For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
 
