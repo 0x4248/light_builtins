@@ -10,8 +10,8 @@ The commands are written in C++, C, Rust and Python.
 Here is a list of the commands and their availability:
 - `ls` - List directory contents `C++` `C` `Ultra light` `Rust` `Python`
 - `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust` `Python`
-- `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust`
-- `echo` - Display a line of text `C++` `C` `Ultra light` `Rust`
+- `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust` `Python`
+- `echo` - Display a line of text `C++` `C` `Ultra light` `Rust` `Python`
 - `mkdir` - Create a directory`C++` `C` `Ultra light` `Rust`
 - `rmdir` - Remove a directory `C++` `C` `Ultra light` `Rust`
 - `rm` - Remove files or directories`C++` `C` `Ultra light` `Rust`
