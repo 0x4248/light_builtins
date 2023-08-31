@@ -4,12 +4,12 @@
 
 This is a repository of the linux builtin commands that is lightweight and fast.
 
-The commands are written in C++, C and Rust.
+The commands are written in C++, C, Rust and Python.
 
 ## 📝 Commands List
 Here is a list of the commands and their availability:
-- `ls` - List directory contents `C++` `C` `Ultra light` `Rust`
-- `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust`
+- `ls` - List directory contents `C++` `C` `Ultra light` `Rust` `Python`
+- `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust` `Python`
 - `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust`
 - `echo` - Display a line of text `C++` `C` `Ultra light` `Rust`
 - `mkdir` - Create a directory`C++` `C` `Ultra light` `Rust`
