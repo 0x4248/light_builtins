@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Light builtins's (Python version)
 # pwd - print working directory
 # A lightweight repository of useful shell commands

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Light builtins's (Python version)
 # cat - concatenate files and print on the standard output
 # A lightweight repository of useful shell commands

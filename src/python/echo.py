@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Light builtins's (Python version)
 # echo - print arguments to the standard output
 # A lightweight repository of useful shell commands
