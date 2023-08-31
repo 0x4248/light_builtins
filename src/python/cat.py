@@ -8,6 +8,7 @@
 import os
 import sys
 
+
 def main(args):
     if len(args) == 0:
         print("cat: missing operand")
@@ -20,6 +21,7 @@ def main(args):
             print("cat: " + arg + ": No such file or directory")
             return 1
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
