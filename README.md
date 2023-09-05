@@ -94,3 +94,7 @@ make compile_rust
 ```
 
 The binaries will be in the `bin/rust` folder.
+
+## 📝 Licence
+
+This project is licenced under the GNU General Public Licence v3.0 - see the [LICENCE.md](LICENCE.md) file for details.
