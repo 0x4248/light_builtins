@@ -20,7 +20,7 @@ FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)-$(CODE_NAME)
 
 MAJOR_MAKEFILE_VERSION = 1
 MINOR_MAKEFILE_VERSION = 0
-PATCH_MAKEFILE_VERSION = 2
+PATCH_MAKEFILE_VERSION = 3
 MAKEFILE_VERSION = $(MAJOR_MAKEFILE_VERSION).$(MINOR_MAKEFILE_VERSION).$(PATCH_MAKEFILE_VERSION)
 
 SRC = src
@@ -139,7 +139,6 @@ configure_test:
 	echo "This is a test file" > test/test4.txt
 	mkdir test/test_dir
 	mkdir test/test_dir2
-
 
 test_cpp:
 	$(CPP_OUTPUT)/ls test
