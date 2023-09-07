@@ -10,6 +10,9 @@
 # make configure_test test_cpp test_c - configures tests and runs tests
 # make help - show help message
 
+# ========== VERSION CONFIGURATION ==========
+
+# Version Configuration
 MAJOR_VERSION = 1
 MINOR_VERSION = 2
 PATCH_VERSION = 0
@@ -18,30 +21,39 @@ CODE_NAME = Brass
 VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)
 FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)-$(CODE_NAME)
 
+# Makefile Configuration
 MAJOR_MAKEFILE_VERSION = 1
 MINOR_MAKEFILE_VERSION = 0
-PATCH_MAKEFILE_VERSION = 3
+PATCH_MAKEFILE_VERSION = 4
 MAKEFILE_VERSION = $(MAJOR_MAKEFILE_VERSION).$(MINOR_MAKEFILE_VERSION).$(PATCH_MAKEFILE_VERSION)
 
+# ========== MAIN CONFIGURATION ==========
+
+# Source Configuration
 SRC = src
 
+# C++ Configuration
 CPP_CC = g++
 CPP_FLAGS = -g -Wall -Wextra -std=c++17 -Os -I include
 CPP_OUTPUT = bin
 
+# C Configuration
 C_CC = gcc
 C_FLAGS = -g -Wall -Wextra -std=c2x -Os -I include
 C_OUTPUT = bin/c
 C_SRC = src/c
 
+# Ultra light configuration
 ULTRA_LIGHT_OUTPUT = bin/ultra_light
 
+# Rust Configuration
 RUST_CC = rustc
 RUST_FLAGS = 
 RUST_OUTPUT = bin/rust
 RUST_SRC = src/rust
 
 all: clean init compile_cpp compile_c compile_ultra_light compile_rust
+
 help:
 	@echo "\033[1mLight builtins's Makefile\033[0m"
 	@echo "========================================"
