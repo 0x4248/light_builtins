@@ -4,7 +4,7 @@
 
 This is a repository of the linux builtin commands that is lightweight and fast.
 
-The commands are written in C++, C, Rust and Python. There is also a lighter weight version which has smaller code size and is written in C.
+The commands are written in C++, C, Rust and Python. There is also a lighter weight version which has smaller code size and less features. Is also written in C.
 
 ## 📝 Commands List
 Here is a list of the commands and their availability:
