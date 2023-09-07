@@ -19,7 +19,7 @@ FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
 
 MAJOR_MAKEFILE_VERSION = 1
 MINOR_MAKEFILE_VERSION = 0
-PATCH_MAKEFILE_VERSION = 0
+PATCH_MAKEFILE_VERSION = 1
 MAKEFILE_VERSION = $(MAJOR_MAKEFILE_VERSION).$(MINOR_MAKEFILE_VERSION).$(PATCH_MAKEFILE_VERSION)
 
 SRC = src
@@ -66,8 +66,9 @@ help:
 	@echo "make test_cpp             | runs C++ builtins tests"
 	@echo "make test_c               | runs C builtins tests"
 	@echo "make update_cargo_version | updates Cargo.toml's version"
-	@echo "make version			     | prints the version and git commit hash"
+	@echo "make version			     | prints the version"
 	@echo "make makefile_version     | prints the Makefile version"
+	@echo "make git_hash             | prints the git commit hash"
 	@echo "make help                 | prints this help message"
 	
 compile_cpp:
@@ -161,6 +162,8 @@ update_cargo_version:
 
 version:
 	@echo $(FULL_VERSION)
+
+git_hash:
 	@git rev-parse HEAD
 
 makefile_version:
