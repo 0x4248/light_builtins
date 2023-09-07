@@ -17,6 +17,11 @@ EXTRA_VERSION = stable
 VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)
 FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
 
+MAJOR_MAKEFILE_VERSION = 1
+MINOR_MAKEFILE_VERSION = 0
+PATCH_MAKEFILE_VERSION = 0
+MAKEFILE_VERSION = $(MAJOR_MAKEFILE_VERSION).$(MINOR_MAKEFILE_VERSION).$(PATCH_MAKEFILE_VERSION)
+
 SRC = src
 
 CPP_CC = g++
@@ -40,6 +45,7 @@ help:
 	@echo "\033[1mLight builtins's Makefile\033[0m"
 	@echo "========================================"
 	@echo  "Version: $(FULL_VERSION)"
+	@echo  "Makefile version: $(MAKEFILE_VERSION)"
 	@git rev-parse HEAD
 	@echo "========================================"
 	@echo "A lightweight repository of useful shell commands"
@@ -61,6 +67,7 @@ help:
 	@echo "make test_c               | runs C builtins tests"
 	@echo "make update_cargo_version | updates Cargo.toml's version"
 	@echo "make version			     | prints the version and git commit hash"
+	@echo "make makefile_version     | prints the Makefile version"
 	@echo "make help                 | prints this help message"
 	
 compile_cpp:
@@ -155,3 +162,6 @@ update_cargo_version:
 version:
 	@echo $(FULL_VERSION)
 	@git rev-parse HEAD
+
+makefile_version:
+	@echo $(MAKEFILE_VERSION)
