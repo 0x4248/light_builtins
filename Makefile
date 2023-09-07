@@ -13,13 +13,14 @@
 MAJOR_VERSION = 1
 MINOR_VERSION = 2
 PATCH_VERSION = 0
-EXTRA_VERSION = stable
+EXTRA_VERSION = Stable
+CODE_NAME = Brass
 VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)
-FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)
+FULL_VERSION = $(VERSION)-$(EXTRA_VERSION)-$(CODE_NAME)
 
 MAJOR_MAKEFILE_VERSION = 1
 MINOR_MAKEFILE_VERSION = 0
-PATCH_MAKEFILE_VERSION = 1
+PATCH_MAKEFILE_VERSION = 2
 MAKEFILE_VERSION = $(MAJOR_MAKEFILE_VERSION).$(MINOR_MAKEFILE_VERSION).$(PATCH_MAKEFILE_VERSION)
 
 SRC = src
@@ -66,7 +67,7 @@ help:
 	@echo "make test_cpp             | runs C++ builtins tests"
 	@echo "make test_c               | runs C builtins tests"
 	@echo "make update_cargo_version | updates Cargo.toml's version"
-	@echo "make version			     | prints the version"
+	@echo "make version		  | prints the version"
 	@echo "make makefile_version     | prints the Makefile version"
 	@echo "make git_hash             | prints the git commit hash"
 	@echo "make help                 | prints this help message"
