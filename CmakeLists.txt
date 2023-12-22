@@ -1,0 +1,19 @@
+# Light builtins's Makefile
+# A lightweight repository of useful shell commands
+# GitHub: https://www.github.com/lewisevans2007/light_builtins
+# Licence: GNU General Public License v3.0
+# By: Lewis Evans
+
+cmake_minimum_required(VERSION 3.0)
+project(light_builtins)
+
+set(CMAKE_CXX_STANDARD 17)
+
+include_directories(include)
+
+file(GLOB SOURCES_CPP "src/*.cpp")
+
+foreach(SOURCE_CPP ${SOURCES_CPP})
+    get_filename_component(SOURCE_NAME ${SOURCE_CPP} NAME_WE)
+    add_executable(${SOURCE_NAME} ${SOURCE_CPP})
+endforeach()

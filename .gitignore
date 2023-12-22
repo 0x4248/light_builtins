@@ -2,5 +2,5 @@ bin/
 *.out
 *.o
 /target
-
+build/
 compile_commands.json
