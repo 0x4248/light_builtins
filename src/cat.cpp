@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     }
     /* Check if the user has provided the correct number of arguments */
     if (argc < file_offset + 1) {
-        std::cerr << "Usage: " << argv[0] << " [-nev] [file ...]\n"; 
+        std::cerr << "Usage: " << argv[0] << " [-nev] [file ...]\n";
         std::cerr << "Light Builtins (C++) " << VERSION_MAJOR << "."
                   << VERSION_MINOR << "." << VERSION_PATCH << "-"
                   << EXTRA_VERSION << std::endl;
@@ -66,14 +66,15 @@ int main(int argc, char *argv[]) {
         /* Read each line of the file and print it to the console */
         while (std::getline(file, line)) {
             if (show_line_numbers) {
-                std::cout << CYAN << line_number << RESET << "\t" << line << "\n";
-            } else if (show_ends)
-            {
-                std::cout << line << "$" << "\n";
+                std::cout << CYAN << line_number << RESET << "\t" << line
+                          << "\n";
+            } else if (show_ends) {
+                std::cout << line << "$"
+                          << "\n";
             } else {
                 std::cout << line << "\n";
             }
-            
+
             line_number++;
         }
         file.close();
