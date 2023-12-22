@@ -14,7 +14,7 @@
 /* Version number configuration */
 #define VERSION_MAJOR 1
 #define VERSION_MINOR 2
-#define VERSION_PATCH 0
-#define EXTRA_VERSION "Stable"
+#define VERSION_PATCH 1
+#define EXTRA_VERSION "Hotfix"
 
 #endif
