@@ -30,43 +30,50 @@ int main(int argc, char *argv[]) {
         return 0;
     }
     std::string path;
-    /* Check if the user has provided the -l flag to show file sizes */
-    if (strcmp(argv[1], "-l") == 0) {
-        /* Get the path to the directory to list */
-        std::string path = argc > 2 ? argv[2] : ".";
-        /* Loop through each file in the directory */
-        for (const auto &entry : std::filesystem::directory_iterator(path)) {
-            std::string name = entry.path().filename();
-            int size;
-            /* Check if the file is a directory */
-            if (entry.is_directory()) {
-                /* Format the directory name with color */
-                name = BLUE_BOLD + name + RESET;
-                size = 0;
-                /* Loop through each file in the directory and get the total
-                 * size */
-                for (const auto &entry2 :
-                     std::filesystem::directory_iterator(entry.path())) {
-                    std::ifstream file(entry2.path());
+    /**
+     * Check if the user has provided the -l flag to show file sizes 
+     * We also check if the user has provided a second argument. This 
+     * Prevents segmentation faults if the user does not provide a 
+     * argument at all.
+     */
+    if (argc >= 2) {
+        if (strcmp(argv[1], "-l") == 0) {
+            /* Get the path to the directory to list */
+            std::string path = argc > 2 ? argv[2] : ".";
+            /* Loop through each file in the directory */
+            for (const auto &entry : std::filesystem::directory_iterator(path)) {
+                std::string name = entry.path().filename();
+                int size;
+                /* Check if the file is a directory */
+                if (entry.is_directory()) {
+                    /* Format the directory name with color */
+                    name = BLUE_BOLD + name + RESET;
+                    size = 0;
+                    /* Loop through each file in the directory and get the total
+                     * size */
+                    for (const auto &entry2 :
+                         std::filesystem::directory_iterator(entry.path())) {
+                        std::ifstream file(entry2.path());
+                        file.seekg(0, std::ios::end);
+                        size += file.tellg();
+                    }
+                } else {
+                    /* Get the size of the file */
+                    std::ifstream file(name);
                     file.seekg(0, std::ios::end);
-                    size += file.tellg();
+                    size = file.tellg();
                 }
-            } else {
-                /* Get the size of the file */
-                std::ifstream file(name);
-                file.seekg(0, std::ios::end);
-                size = file.tellg();
+                /* Remove any quotes from the file name */
+                name.erase(remove(name.begin(), name.end(), '"'), name.end());
+                /* Print the file size and name to the console */
+                if (size > 0) {
+                    std::cout << size << "\t" << name << std::endl;
+                } else {
+                    std::cout << "\t" << name << std::endl;
+                }
             }
-            /* Remove any quotes from the file name */
-            name.erase(remove(name.begin(), name.end(), '"'), name.end());
-            /* Print the file size and name to the console */
-            if (size > 0) {
-                std::cout << size << "\t" << name << std::endl;
-            } else {
-                std::cout << "\t" << name << std::endl;
-            }
+            return 0;
         }
-        return 0;
     }
     /* Get the path to the directory to list */
     path = argc > 1 ? argv[1] : ".";
