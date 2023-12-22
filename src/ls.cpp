@@ -31,9 +31,9 @@ int main(int argc, char *argv[]) {
     }
     std::string path;
     /**
-     * Check if the user has provided the -l flag to show file sizes 
-     * We also check if the user has provided a second argument. This 
-     * Prevents segmentation faults if the user does not provide a 
+     * Check if the user has provided the -l flag to show file sizes
+     * We also check if the user has provided a second argument. This
+     * Prevents segmentation faults if the user does not provide a
      * argument at all.
      */
     if (argc >= 2) {
@@ -41,7 +41,8 @@ int main(int argc, char *argv[]) {
             /* Get the path to the directory to list */
             std::string path = argc > 2 ? argv[2] : ".";
             /* Loop through each file in the directory */
-            for (const auto &entry : std::filesystem::directory_iterator(path)) {
+            for (const auto &entry :
+                 std::filesystem::directory_iterator(path)) {
                 std::string name = entry.path().filename();
                 int size;
                 /* Check if the file is a directory */
