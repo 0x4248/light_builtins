@@ -17,10 +17,16 @@
 
 int main(int argc, char *argv[]) {
     bool show_line_numbers = false;
+    bool show_ends = false;
     int file_offset = 1;
     /* Check if the user has provided the -n flag to show line numbers */
     if (argc >= 2 && std::string(argv[1]) == "-n") {
         show_line_numbers = true;
+        file_offset = 2;
+    }
+    /* Check if the user has provided the -e flag to show line endings */
+    if (argc >= 2 && std::string(argv[1]) == "-e") {
+        show_ends = true;
         file_offset = 2;
     }
     /* Check if the user has provided the -v or --version flag to show the
@@ -34,7 +40,7 @@ int main(int argc, char *argv[]) {
     }
     /* Check if the user has provided the correct number of arguments */
     if (argc < file_offset + 1) {
-        std::cerr << "Usage: " << argv[0] << " [-n] <file1> [<file2> ...]\n";
+        std::cerr << "Usage: " << argv[0] << " [-nev] [file ...]\n"; 
         std::cerr << "Light Builtins (C++) " << VERSION_MAJOR << "."
                   << VERSION_MINOR << "." << VERSION_PATCH << "-"
                   << EXTRA_VERSION << std::endl;
@@ -60,9 +66,14 @@ int main(int argc, char *argv[]) {
         /* Read each line of the file and print it to the console */
         while (std::getline(file, line)) {
             if (show_line_numbers) {
-                std::cout << CYAN << line_number << RESET << "\t";
+                std::cout << CYAN << line_number << RESET << "\t" << line << "\n";
+            } else if (show_ends)
+            {
+                std::cout << line << "$" << "\n";
+            } else {
+                std::cout << line << "\n";
             }
-            std::cout << line << "\n";
+            
             line_number++;
         }
         file.close();
