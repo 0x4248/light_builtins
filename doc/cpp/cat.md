@@ -10,5 +10,6 @@ cat [FILE] [OPTION]
 
 |    Option    |          Description          |
 |--------------|-------------------------------|
-| -ln          | Number all output lines       |
+| -n           | Number all output lines       |
+| -e           | Display newlines as `$`       |
 | -v --version | Show the version and exit     |
