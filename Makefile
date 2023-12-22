@@ -136,6 +136,7 @@ clean:
 	rm -rf $(C_OUTPUT)/*
 	rm -rf $(CPP_OUTPUT)/*
 	rm -rf $(RUST_OUTPUT)/*
+	rm -rf $(ULTRA_LIGHT_OUTPUT)/*
 
 init:
 	mkdir -p $(C_OUTPUT)
