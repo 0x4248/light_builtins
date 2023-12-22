@@ -7,20 +7,38 @@ This is a repository of the linux builtin commands that is lightweight and fast.
 The commands are written in C++, C, Rust and Python. There is also a lighter weight version which has smaller code size and less features. Is also written in C.
 
 ## 📝 Commands List
-Here is a list of the commands and their availability:
-- `ls` - List directory contents `C++` `C` `Ultra light` `Rust` `Python`
-- `pwd` - Print name of current/working directory `C++` `C` `Ultra light` `Rust` `Python`
-- `cat` - Concatenate files and print on the standard output`C++` `C` `Ultra light` `Rust` `Python`
-- `echo` - Display a line of text `C++` `C` `Ultra light` `Rust` `Python`
-- `mkdir` - Create a directory`C++` `C` `Ultra light` `Rust` `Python`
-- `rmdir` - Remove a directory `C++` `C` `Ultra light` `Rust` `Python` 
-- `rm` - Remove files or directories`C++` `C` `Ultra light` `Rust` `Python`
-- `cp` - Copy files and directories `C++` `Ultra light` `Rust` `Python`
-- `mv` - Move (rename) files `C++` `C` `Ultra light` `Rust` `Python`
-- `touch` - Change file timestamps `C++` `C` `Ultra light` `Rust` `Python`
-- `date` - Display the current time and date `C++` `C` `Ultra light` `Rust` `Python`
+Here is a list of the commands:
+- `ls` - List directory contents.
+- `pwd` - Print name of current/working directory.
+- `cat` - Concatenate files and print on the standard output.
+- `echo` - Display a line of text.
+- `mkdir` - Create a directory.
+- `rmdir` - Remove a directory.
+- `rm` - Remove files or directories.
+- `cp` - Copy files and directories.
+- `mv` - Move (rename) files.
+- `touch` - Change file timestamps.
+- `date` - Display the current time and date.
 
 For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
+
+## ✅ Availability
+
+Here are the commands and their availability:
+
+| Command | C++ |    C    | Ultra light | Rust | Python |
+|---------|-----|---------|-------------|------|--------|
+| ls      | Yes | Yes     | Yes         | Yes  | Yes    |
+| pwd     | Yes | Yes     | Yes         | Yes  | Yes    |
+| cat     | Yes | Yes     | Yes         | Yes  | Yes    |
+| echo    | Yes | Yes     | Yes         | Yes  | Yes    |
+| mkdir   | Yes | Yes     | Yes         | Yes  | Yes    |
+| rmdir   | Yes | Yes     | Yes         | Yes  | Yes    |
+| rm      | Yes | Yes     | Yes         | Yes  | Yes    |
+| cp      | Yes | **No**  | Yes         | Yes  | Yes    |
+| mv      | Yes | Yes     | Yes         | Yes  | Yes    |
+| touch   | Yes | Yes     | Yes         | Yes  | Yes    |
+| date    | Yes | Yes     | Yes         | Yes  | Yes    |
 
 ## 📦 Dependencies
 - `make`
@@ -63,6 +81,8 @@ make clean
 ```
 
 ## 🔨 Alternative build
+
+### Build using sh
 If you want to build using sh instead of make, run the following command:
 ```bash
 sh scripts/build_c.sh
@@ -74,6 +94,15 @@ To clean the build, run the following command:
 ```bash
 sh scripts/clean.sh
 ```
+
+### Build using cmake
+If you want to build using cmake instead of make, run the following command:
+```bash
+sh scripts/cmake.sh
+```
+
+> [!WARNING]
+> This will only build the C++ versions of the commands and will also output to the `build` folder.
 
 ## 🏃‍♂️ Ultra light
 
