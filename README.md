@@ -19,6 +19,8 @@ Here is a list of the commands:
 - `mv` - Move (rename) files.
 - `touch` - Change file timestamps.
 - `date` - Display the current time and date.
+- `help` - Display help information.
+- `exit` - Exit the shell.
 
 For documentation on the commands, see the [doc/README.md](doc/README.md) folder.
 
@@ -85,20 +87,20 @@ make clean
 ### Build using sh
 If you want to build using sh instead of make, run the following command:
 ```bash
-sh scripts/build_c.sh
-sh scripts/build_cpp.sh
+sh tools/build_c.sh
+sh tools/build_cpp.sh
 ```
 The binaries will be in the `bin` folder. C versions of the commands will be in the `bin/c` folder.
 
 To clean the build, run the following command:
 ```bash
-sh scripts/clean.sh
+sh tools/clean.sh
 ```
 
 ### Build using cmake
 If you want to build using cmake instead of make, run the following command:
 ```bash
-sh scripts/cmake.sh
+sh tools/cmake.sh
 ```
 
 > [!WARNING]
