@@ -16,3 +16,11 @@ If you want to build the C versions of the commands, run the following command:
 make compile_c
 ```
 The binaries will be in the `bin/c` folder.
+
+## Build C++
+If you want to build the C++ versions of the commands, run the following command:
+```bash
+make compile_cpp
+```
+
+The binaries will be in the `bin/cpp` folder.
