@@ -13,21 +13,21 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       - name: Build docker c++ image
         run: |
-          docker build -f dockerfiles/cpp.dockerfile . --tag ghcr.io/lewisevans2007/light_builtins:latest
-          docker run ghcr.io/lewisevans2007/light_builtins:latest
-          docker push ghcr.io/lewisevans2007/light_builtins:latest
+          docker build -f dockerfiles/cpp.dockerfile . --tag ghcr.io/0x4248/light_builtins:latest
+          docker run ghcr.io/0x4248/light_builtins:latest
+          docker push ghcr.io/0x4248/light_builtins:latest
       - name: Build docker rust image
         run: |
-          docker build -f dockerfiles/cpp.dockerfile . --tag ghcr.io/lewisevans2007/light_builtins_rust:latest
-          docker run ghcr.io/lewisevans2007/light_builtins_rust:latest
-          docker push ghcr.io/lewisevans2007/light_builtins_rust:latest
+          docker build -f dockerfiles/cpp.dockerfile . --tag ghcr.io/0x4248/light_builtins_rust:latest
+          docker run ghcr.io/0x4248/light_builtins_rust:latest
+          docker push ghcr.io/0x4248/light_builtins_rust:latest
       - name: Build docker c image
         run: |
-          docker build -f dockerfiles/c.dockerfile . --tag ghcr.io/lewisevans2007/light_builtins_c:latest
-          docker run ghcr.io/lewisevans2007/light_builtins_c:latest
-          docker push ghcr.io/lewisevans2007/light_builtins_c:latest
+          docker build -f dockerfiles/c.dockerfile . --tag ghcr.io/0x4248/light_builtins_c:latest
+          docker run ghcr.io/0x4248/light_builtins_c:latest
+          docker push ghcr.io/0x4248/light_builtins_c:latest
       - name: Build docker ultra_light image
         run: |
-          docker build -f dockerfiles/ultra_light.dockerfile . --tag ghcr.io/lewisevans2007/light_builtins_ultra_light:latest
-          docker run ghcr.io/lewisevans2007/light_builtins_ultra_light:latest
-          docker push ghcr.io/lewisevans2007/light_builtins_ultra_light:latest
+          docker build -f dockerfiles/ultra_light.dockerfile . --tag ghcr.io/0x4248/light_builtins_ultra_light:latest
+          docker run ghcr.io/0x4248/light_builtins_ultra_light:latest
+          docker push ghcr.io/0x4248/light_builtins_ultra_light:latest

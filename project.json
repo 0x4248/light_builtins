@@ -3,9 +3,9 @@
     "description": "This is a repository of the linux builtin commands that is lightweight and fast.",
     "version": "",
     "main_file": "none",
-    "author": "Lewis Evans",
+    "author": "0x4248",
     "license": "GNU General Public License v3.0",
-    "url": "https://www.github.com/lewisevans2007/light_builtins",
+    "url": "https://www.github.com/0x4248/light_builtins",
     "email": "none",
     "languages": [
         "shell",

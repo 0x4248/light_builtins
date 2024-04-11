@@ -1,8 +1,8 @@
 /* Light builtins's (config.h)
  * A lightweight repository of useful shell commands
- * GitHub: https://www.github.com/lewisevans2007/light_builtins
+ * GitHub: https://www.github.com/0x4248/light_builtins
  * Licence: GNU General Public License v3.0
- * By: Lewis Evans
+ * By: 0x4248
  *
  * This file contains the configuration for the Light builtins project.
  * This is so that all the c and c++ can access things like the version number.

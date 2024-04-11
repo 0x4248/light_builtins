@@ -1,6 +1,6 @@
 # 📦 Light Builtin's
-[![CodeFactor](https://www.codefactor.io/repository/github/lewisevans2007/light_builtins/badge/master)](https://www.codefactor.io/repository/github/lewisevans2007/light_builtins/overview/master)
-![GitHub repo size](https://img.shields.io/github/repo-size/lewisevans2007/light_builtins)
+[![CodeFactor](https://www.codefactor.io/repository/github/0x4248/light_builtins/badge/master)](https://www.codefactor.io/repository/github/0x4248/light_builtins/overview/master)
+![GitHub repo size](https://img.shields.io/github/repo-size/0x4248/light_builtins)
 
 This is a repository of the linux builtin commands that is lightweight and fast.
 
