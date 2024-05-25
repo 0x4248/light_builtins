@@ -14,6 +14,7 @@ fn main() {
     let mut output = String::new();
 
     for i in 1..args.len() {
+        /* Concatenate the arguments */
         output.push_str(&args[i]);
         output.push(' ');
     }
